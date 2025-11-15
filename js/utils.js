@@ -258,22 +258,28 @@ function getURLErrorMessage(url, error) {
   if (error.name === 'AbortError') {
     return 'Request timed out. The server took too long to respond.';
   }
-  
-  if (url.includes('github.com')) {
+
+  // For GitHub URLs, only suggest using raw URL if it's not already a raw URL
+  if (url.includes('github.com') && !url.includes('raw.githubusercontent.com')) {
     return 'Failed to load from GitHub. Try using the "Raw" button URL (raw.githubusercontent.com) instead.';
   }
-  
+
+  // If it's already a raw GitHub URL that failed
+  if (url.includes('raw.githubusercontent.com')) {
+    return 'Failed to load from GitHub. Please check if the file exists and is publicly accessible.';
+  }
+
   if (error.message && error.message.includes('CORS')) {
     return 'This URL does not allow cross-origin requests. Try downloading the file and uploading it instead.';
   }
-  
+
   if (error.message && error.message.includes('404')) {
     return 'File not found (404). Please check the URL and try again.';
   }
-  
+
   if (error.message && error.message.includes('403')) {
     return 'Access forbidden (403). The file may be private or require authentication.';
   }
-  
+
   return error.message || 'Failed to load from URL. Please check the URL and try again.';
 }
