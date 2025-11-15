@@ -49,6 +49,19 @@
   color: #60a5fa !important;
 }
 
+/* Support btn-icon class used on other pages */
+.dark-mode .nav .btn-icon {
+  background: transparent !important;
+  border-color: #374151 !important;
+  color: #9ca3af !important;
+}
+
+.dark-mode .nav .btn-icon:hover {
+  background: #374151 !important;
+  border-color: #60a5fa !important;
+  color: #60a5fa !important;
+}
+
 .dark-mode .mobile-menu-toggle span {
   background: #f9fafb !important;
 }
@@ -98,6 +111,62 @@
 
 .dark-mode .heart {
   color: #ef4444 !important;
+}
+
+/* Footer Legal & Credits Dark Mode */
+.dark-mode .footer-legal p,
+.dark-mode .footer-credits p,
+.dark-mode .footer-disclaimer {
+  color: #9ca3af !important;
+}
+
+/* ===================================
+   Dark Mode Hero Section Fixes
+   =================================== */
+
+.dark-mode .hero {
+  background: linear-gradient(135deg, #111827 0%, #1f2937 50%, #111827 100%) !important;
+  border-bottom-color: #374151 !important;
+}
+
+.dark-mode .hero::before {
+  background: radial-gradient(ellipse at 50% 50%, rgba(96, 165, 250, 0.08) 0%, transparent 70%) !important;
+}
+
+.dark-mode .hero-badge {
+  background: rgba(31, 41, 55, 0.8) !important;
+  border-color: #60a5fa !important;
+  color: #60a5fa !important;
+  box-shadow: 0 4px 12px rgba(96, 165, 250, 0.2) !important;
+}
+
+.dark-mode .hero h1 {
+  color: #f9fafb !important;
+}
+
+.dark-mode .hero-subtitle {
+  color: #d1d5db !important;
+}
+
+.dark-mode .input-tabs {
+  background: rgba(31, 41, 55, 0.6) !important;
+  border-color: #374151 !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3) !important;
+}
+
+.dark-mode .tab-btn {
+  color: #9ca3af !important;
+}
+
+.dark-mode .tab-btn:hover {
+  color: #f9fafb !important;
+  background: #374151 !important;
+}
+
+.dark-mode .tab-btn.active {
+  background: #60a5fa !important;
+  color: white !important;
+  box-shadow: 0 4px 12px rgba(96, 165, 250, 0.4) !important;
 }
 
 /* ===================================
