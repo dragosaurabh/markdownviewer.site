@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Convert Markdown to PDF: Complete Guide | Markdown Viewer Blog</title>
+  <meta name="description" content="Learn multiple methods to convert your markdown files to PDF format. From browser print functions to command-line tools, discover the best approach for your needs.">
+  <link rel="canonical" href="https://www.markdownviewer.site/blog/convert-markdown-to-pdf.html">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/themes.css">
+  <link rel="stylesheet" href="css/dark-mode-fixes.css">
+  <link rel="stylesheet" href="../css/blog.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "How to Convert Markdown to PDF: Complete Guide",
+    "description": "Learn multiple methods to convert markdown files to PDF format",
+    "author": {
+      "@type": "Organization",
+      "name": "Markdown Viewer"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Markdown Viewer",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.markdownviewer.site/assets/images/logo.svg"
+      }
+    },
+    "datePublished": "2025-01-25",
+    "dateModified": "2025-01-25"
+  }
+  </script>
+  <script src="../js/dark-mode.js" defer></script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <a href="../index.html" style="display: flex; align-items: center; gap: 0.5rem; text-decoration: none; color: inherit;">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+              <rect width="32" height="32" rx="6" fill="currentColor" opacity="0.1"/>
+              <path d="M8 12h16M8 16h16M8 20h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <span>Markdown Viewer</span>
+          </a>
+        </div>
+        <nav class="nav">
+          <a href="../index.html">Home</a>
+          <a href="../about.html">About</a>
+          <a href="../help.html">Help</a>
+          <a href="../markdown-guide.html">Guide</a>
+          <a href="../blog.html" class="active">Blog</a>
+          <a href="../contact.html">Contact</a>
+          <button id="dark-mode-toggle" class="btn-icon" aria-label="Toggle dark mode" title="Toggle dark mode">
+            <svg class="icon-sun" width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <circle cx="10" cy="10" r="4" stroke="currentColor" stroke-width="2"/>
+              <path d="M10 2v2M10 16v2M18 10h-2M4 10H2M15.66 4.34l-1.41 1.41M5.75 14.25l-1.41 1.41M15.66 15.66l-1.41-1.41M5.75 5.75L4.34 4.34" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <svg class="icon-moon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path d="M17 10.5A7 7 0 1 1 9.5 3a5.5 5.5 0 0 0 7.5 7.5z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <article class="content-page blog-post">
+      <div class="container">
+        <div class="content-wrapper">
+          <div class="blog-header">
+            <a href="../blog.html" class="back-link">← Back to Blog</a>
+            <h1>How to Convert Markdown to PDF: Complete Guide</h1>
+            <div class="blog-meta">
+              <time datetime="2025-01-25">January 25, 2025</time>
+              <span class="reading-time">6 min read</span>
+            </div>
+          </div>
+          
+          <section class="content-section">
+            <p>Converting markdown to PDF is a common need for creating professional documents, reports, and documentation. Whether you're preparing a README for print, generating documentation for clients, or creating a resume, there are multiple ways to convert markdown to PDF. This guide covers the most effective methods, from simple browser-based solutions to powerful command-line tools.</p>
+          </section>
+
+          <section class="content-section">
+            <h2>Method 1: Browser Print to PDF (Easiest)</h2>
+            <p>The simplest way to convert markdown to PDF is using your web browser's built-in print function. This method requires no installation and works on any operating system.</p>
+            
+            <h3>Step-by-Step Process:</h3>
+            <ol>
+              <li>Open your markdown file in a markdown viewer (like our <a href="../index.html">Markdown Viewer</a>)</li>
+              <li>Ensure the content is rendered correctly with proper formatting</li>
+              <li>Press <code>Ctrl+P</code> (Windows/Linux) or <code>Cmd+P</code> (Mac) to open the print dialog</li>
+              <li>Select "Save as PDF" or "Microsoft Print to PDF" as the destination</li>
+              <li>Adjust settings like margins, headers/footers, and page orientation</li>
+              <li>Click "Save" and choose your destination folder</li>
+            </ol>
+            
+            <p><strong>Pros:</strong></p>
+            <ul>
+              <li>No software installation required</li>
+              <li>Works on any operating system</li>
+              <li>Preserves styling and formatting</li>
+              <li>Free and instant</li>
+            </ul>
+            
+            <p><strong>Cons:</strong></p>
+            <ul>
+              <li>Limited customization options</li>
+              <li>May have page break issues</li>
+              <li>Depends on browser rendering</li>
+            </ul>
+          </section>
+
+          <section class="content-section">
+            <h2>Method 2: Pandoc (Most Powerful)</h2>
+            <p>Pandoc is a universal document converter that can transform markdown into PDF with extensive customization options. It's the go-to tool for professional document conversion.</p>
+            
+            <h3>Installation:</h3>
+            <p><strong>Windows:</strong></p>
+            <pre><code># Download installer from pandoc.org
+# Or use Chocolatey:
+choco install pandoc</code></pre>
+            
+            <p><strong>Mac:</strong></p>
+            <pre><code># Using Homebrew:
+brew install pandoc
+
+# You'll also need LaTeX for PDF output:
+brew install basictex</code></pre>
+            
+            <p><strong>Linux (Ubuntu/Debian):</strong></p>
+            <pre><code>sudo apt-get update
+sudo apt-get install pandoc texlive-latex-base</code></pre>
+            
+            <h3>Basic Usage:</h3>
+            <pre><code># Simple conversion
+pandoc input.md -o output.pdf
+
+# With table of contents
+pandoc input.md -o output.pdf --toc
+
+# With custom styling
+pandoc input.md -o output.pdf --css=style.css
+
+# With metadata
+pandoc input.md -o output.pdf --metadata title="My Document"</code></pre>
+            
+            <h3>Advanced Options:</h3>
+            <pre><code># Full-featured conversion
+pandoc input.md -o output.pdf \
+  --toc \
+  --toc-depth=3 \
+  --number-sections \
+  --highlight-style=github \
+  --variable=geometry:margin=1in \
+  --variable=fontsize:12pt</code></pre>
+            
+            <p><strong>Pros:</strong></p>
+            <ul>
+              <li>Extremely powerful and flexible</li>
+              <li>Professional output quality</li>
+              <li>Extensive customization options</li>
+              <li>Batch processing support</li>
+              <li>Free and open source</li>
+            </ul>
+            
+            <p><strong>Cons:</strong></p>
+            <ul>
+              <li>Requires installation and setup</li>
+              <li>Steeper learning curve</li>
+              <li>Needs LaTeX for PDF output</li>
+              <li>Command-line interface</li>
+            </ul>
+          </section>
+
+          <section class="content-section">
+            <h2>Method 3: VS Code Extensions</h2>
+            <p>If you use Visual Studio Code, several extensions can convert markdown to PDF directly from your editor.</p>
+            
+            <h3>Markdown PDF Extension:</h3>
+            <ol>
+              <li>Install the "Markdown PDF" extension from the VS Code marketplace</li>
+              <li>Open your markdown file in VS Code</li>
+              <li>Press <code>Ctrl+Shift+P</code> (or <code>Cmd+Shift+P</code> on Mac)</li>
+              <li>Type "Markdown PDF: Export (pdf)" and press Enter</li>
+              <li>The PDF will be saved in the same directory as your markdown file</li>
+            </ol>
+            
+            <h3>Configuration:</h3>
+            <p>You can customize the output by adding settings to your VS Code settings.json:</p>
+            <pre><code>{
+  "markdown-pdf.format": "A4",
+  "markdown-pdf.margin.top": "1.5cm",
+  "markdown-pdf.margin.bottom": "1cm",
+  "markdown-pdf.margin.right": "1cm",
+  "markdown-pdf.margin.left": "1cm",
+  "markdown-pdf.displayHeaderFooter": true,
+  "markdown-pdf.headerTemplate": "&lt;div style='font-size:9px;'&gt;&lt;span class='title'&gt;&lt;/span&gt;&lt;/div&gt;",
+  "markdown-pdf.footerTemplate": "&lt;div style='font-size:9px;'&gt;&lt;span class='pageNumber'&gt;&lt;/span&gt; / &lt;span class='totalPages'&gt;&lt;/span&gt;&lt;/div&gt;"
+}</code></pre>
+            
+            <p><strong>Pros:</strong></p>
+            <ul>
+              <li>Integrated into your development workflow</li>
+              <li>Easy to use with keyboard shortcuts</li>
+              <li>Customizable settings</li>
+              <li>Good for regular use</li>
+            </ul>
+            
+            <p><strong>Cons:</strong></p>
+            <ul>
+              <li>Requires VS Code</li>
+              <li>Limited to VS Code environment</li>
+              <li>May have rendering inconsistencies</li>
+            </ul>
+          </section>
+
+          <section class="content-section">
+            <h2>Method 4: Online Converters</h2>
+            <p>Several online tools can convert markdown to PDF without any installation. These are perfect for occasional use or when you're on a computer without your usual tools.</p>
+            
+            <h3>Popular Online Tools:</h3>
+            <ul>
+              <li><strong>Markdown Viewer:</strong> Use our <a href="../index.html">Markdown Viewer</a>, then print to PDF</li>
+              <li><strong>Dillinger:</strong> Online markdown editor with PDF export</li>
+              <li><strong>StackEdit:</strong> Markdown editor with export options</li>
+              <li><strong>Markdown to PDF:</strong> Dedicated conversion services</li>
+            </ul>
+            
+            <p><strong>Pros:</strong></p>
+            <ul>
+              <li>No installation required</li>
+              <li>Works from any device</li>
+              <li>Usually free</li>
+              <li>Simple interface</li>
+            </ul>
+            
+            <p><strong>Cons:</strong></p>
+            <ul>
+              <li>Requires internet connection</li>
+              <li>Privacy concerns with sensitive documents</li>
+              <li>Limited customization</li>
+              <li>File size restrictions</li>
+            </ul>
+          </section>
+
+          <section class="content-section">
+            <h2>Method 5: Node.js Tools</h2>
+            <p>For developers comfortable with Node.js, there are several npm packages that can convert markdown to PDF programmatically.</p>
+            
+            <h3>markdown-pdf Package:</h3>
+            <pre><code># Installation
+npm install -g markdown-pdf
+
+# Usage
+markdown-pdf input.md -o output.pdf
+
+# With options
+markdown-pdf input.md -o output.pdf --format A4 --border 1cm</code></pre>
+            
+            <h3>md-to-pdf Package:</h3>
+            <pre><code># Installation
+npm install -g md-to-pdf
+
+# Usage
+md-to-pdf input.md
+
+# With custom CSS
+md-to-pdf input.md --css-path style.css</code></pre>
+            
+            <h3>Programmatic Usage:</h3>
+            <pre><code>const markdownpdf = require('markdown-pdf');
+const fs = require('fs');
+
+markdownpdf()
+  .from('input.md')
+  .to('output.pdf', function() {
+    console.log('PDF created successfully!');
+  });</code></pre>
+            
+            <p><strong>Pros:</strong></p>
+            <ul>
+              <li>Programmable and automatable</li>
+              <li>Can be integrated into build processes</li>
+              <li>Batch processing support</li>
+              <li>Customizable with code</li>
+            </ul>
+            
+            <p><strong>Cons:</strong></p>
+            <ul>
+              <li>Requires Node.js knowledge</li>
+              <li>Setup complexity</li>
+              <li>Dependency management</li>
+            </ul>
+          </section>
+
+          <section class="content-section">
+            <h2>Comparison Table</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>Method</th>
+                  <th>Ease of Use</th>
+                  <th>Quality</th>
+                  <th>Customization</th>
+                  <th>Best For</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Browser Print</td>
+                  <td>⭐⭐⭐⭐⭐</td>
+                  <td>⭐⭐⭐</td>
+                  <td>⭐⭐</td>
+                  <td>Quick conversions</td>
+                </tr>
+                <tr>
+                  <td>Pandoc</td>
+                  <td>⭐⭐</td>
+                  <td>⭐⭐⭐⭐⭐</td>
+                  <td>⭐⭐⭐⭐⭐</td>
+                  <td>Professional docs</td>
+                </tr>
+                <tr>
+                  <td>VS Code</td>
+                  <td>⭐⭐⭐⭐</td>
+                  <td>⭐⭐⭐⭐</td>
+                  <td>⭐⭐⭐</td>
+                  <td>Developers</td>
+                </tr>
+                <tr>
+                  <td>Online Tools</td>
+                  <td>⭐⭐⭐⭐⭐</td>
+                  <td>⭐⭐⭐</td>
+                  <td>⭐⭐</td>
+                  <td>Occasional use</td>
+                </tr>
+                <tr>
+                  <td>Node.js</td>
+                  <td>⭐⭐</td>
+                  <td>⭐⭐⭐⭐</td>
+                  <td>⭐⭐⭐⭐</td>
+                  <td>Automation</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section class="content-section">
+            <h2>Tips for Better PDF Output</h2>
+            
+            <h3>1. Optimize Your Markdown</h3>
+            <ul>
+              <li>Use proper heading hierarchy (H1 → H2 → H3)</li>
+              <li>Keep line lengths reasonable</li>
+              <li>Use tables sparingly</li>
+              <li>Optimize images for print (300 DPI)</li>
+            </ul>
+            
+            <h3>2. Control Page Breaks</h3>
+            <p>Add manual page breaks when needed:</p>
+            <pre><code>&lt;!-- HTML page break --&gt;
+&lt;div style="page-break-before: always;"&gt;&lt;/div&gt;
+
+&lt;!-- Pandoc page break --&gt;
+\newpage</code></pre>
+            
+            <h3>3. Custom CSS for Print</h3>
+            <pre><code>@media print {
+  body {
+    font-family: 'Times New Roman', serif;
+    font-size: 12pt;
+    line-height: 1.6;
+  }
+  
+  h1, h2, h3 {
+    page-break-after: avoid;
+  }
+  
+  table, img {
+    page-break-inside: avoid;
+  }
+}</code></pre>
+            
+            <h3>4. Include Metadata</h3>
+            <p>Add metadata to your markdown file:</p>
+            <pre><code>---
+title: "My Document"
+author: "Your Name"
+date: "2025-01-25"
+---
+
+# Document Content</code></pre>
+          </section>
+
+          <section class="content-section">
+            <h2>Troubleshooting Common Issues</h2>
+            
+            <h3>Images Not Displaying</h3>
+            <p><strong>Problem:</strong> Images don't appear in the PDF.</p>
+            <p><strong>Solution:</strong> Use absolute URLs or ensure image paths are correct relative to the markdown file.</p>
+            
+            <h3>Poor Page Breaks</h3>
+            <p><strong>Problem:</strong> Content splits awkwardly across pages.</p>
+            <p><strong>Solution:</strong> Add manual page breaks or adjust CSS page-break properties.</p>
+            
+            <h3>Fonts Not Rendering</h3>
+            <p><strong>Problem:</strong> Custom fonts don't appear in PDF.</p>
+            <p><strong>Solution:</strong> Use web-safe fonts or embed fonts in your CSS.</p>
+            
+            <h3>Large File Sizes</h3>
+            <p><strong>Problem:</strong> PDF file is too large.</p>
+            <p><strong>Solution:</strong> Optimize images, use vector graphics, or compress the final PDF.</p>
+          </section>
+
+          <section class="content-section">
+            <h2>Conclusion</h2>
+            <p>Converting markdown to PDF doesn't have to be complicated. For quick conversions, use the browser print method or online tools. For professional documents with custom styling, Pandoc is unbeatable. Developers will appreciate VS Code extensions for integrated workflow, while Node.js tools offer the most flexibility for automated processes.</p>
+            
+            <p><strong>Our Recommendations:</strong></p>
+            <ul>
+              <li><strong>Beginners:</strong> Start with browser print method</li>
+              <li><strong>Regular users:</strong> Try VS Code extensions or online tools</li>
+              <li><strong>Power users:</strong> Learn Pandoc for maximum control</li>
+              <li><strong>Developers:</strong> Integrate Node.js tools into your workflow</li>
+            </ul>
+            
+            <p>Want to try converting your markdown to PDF right now? Use our <a href="../index.html">Markdown Viewer</a> to preview your content, then use your browser's print function to save as PDF!</p>
+          </section>
+
+          <div class="blog-footer">
+            <div class="blog-tags">
+              <span class="tag">Markdown</span>
+              <span class="tag">PDF</span>
+              <span class="tag">Tutorial</span>
+              <span class="tag">Tools</span>
+            </div>
+            
+            <div class="blog-navigation">
+              <a href="markdown-vs-rich-text-editors.html" class="btn btn-secondary">← Previous Article</a>
+              <a href="readme-best-practices.html" class="btn btn-secondary">Next Article →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+  
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <!-- Footer Top Section -->
+        <div class="footer-top">
+          <div class="footer-brand">
+            <div class="footer-logo">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+                <rect width="32" height="32" rx="6" fill="currentColor" opacity="0.1"/>
+                <path d="M8 12h16M8 16h16M8 20h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+              <span>Markdown Viewer</span>
+            </div>
+            <p class="footer-description">Free online markdown viewer and converter. View, edit, and convert markdown files instantly with syntax highlighting, dark mode, and privacy-first processing.</p>
+          </div>
+          
+          <div class="footer-links">
+            <div class="footer-column">
+              <h3>Product</h3>
+              <nav aria-label="Product navigation">
+                <a href="../index.html">Markdown Viewer</a>
+                <a href="../help.html">Help & FAQ</a>
+                <a href="../markdown-guide.html">Markdown Guide</a>
+                <a href="../blog.html">Blog</a>
+              </nav>
+            </div>
+            <div class="footer-column">
+              <h3>Company</h3>
+              <nav aria-label="Company navigation">
+                <a href="../about.html">About Us</a>
+                <a href="../contact.html">Contact</a>
+              </nav>
+            </div>
+            <div class="footer-column">
+              <h3>Legal</h3>
+              <nav aria-label="Legal navigation">
+                <a href="../privacy.html">Privacy Policy</a>
+                <a href="../terms.html">Terms & Conditions</a>
+                <a href="../dmca.html">DMCA</a>
+              </nav>
+            </div>
+            <div class="footer-column">
+              <h3>Connect</h3>
+              <nav aria-label="Social navigation">
+                <a href="../contact.html">Email Us</a>
+                <a href="../sitemap-page.html">Sitemap</a>
+              </nav>
+              <div class="footer-social">
+                <a href="#" aria-label="Facebook" title="Facebook">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M20 10c0-5.523-4.477-10-10-10S0 4.477 0 10c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V10h2.54V7.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V10h2.773l-.443 2.89h-2.33v6.988C16.343 19.128 20 14.991 20 10z"/>
+                  </svg>
+                </a>
+                <a href="#" aria-label="Twitter" title="Twitter">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84"/>
+                  </svg>
+                </a>
+                <a href="#" aria-label="LinkedIn" title="LinkedIn">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M18.335 0H1.665C.747 0 0 .747 0 1.665v16.67C0 19.253.747 20 1.665 20h16.67C19.253 20 20 19.253 20 18.335V1.665C20 .747 19.253 0 18.335 0zM5.946 17.03H2.97V7.5h2.976v9.53zM4.458 6.19a1.723 1.723 0 110-3.446 1.723 1.723 0 010 3.446zM17.03 17.03h-2.974v-4.64c0-1.107-.02-2.532-1.542-2.532-1.544 0-1.78 1.205-1.78 2.45v4.722H7.76V7.5h2.853v1.303h.04c.397-.752 1.367-1.544 2.813-1.544 3.01 0 3.565 1.98 3.565 4.555v5.216z"/>
+                  </svg>
+                </a>
+                <a href="#" aria-label="GitHub" title="GitHub">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10 0C4.477 0 0 4.477 0 10c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0110 4.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C17.137 18.165 20 14.418 20 10c0-5.523-4.477-10-10-10z" clip-rule="evenodd"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Footer Divider -->
+        <div class="footer-divider"></div>
+        
+        <!-- Footer Bottom Section -->
+        <div class="footer-bottom">
+          <div class="footer-legal">
+            <p>&copy; 2025 Markdown Viewer. All rights reserved.</p>
+            <p class="footer-disclaimer">All markdown processing happens locally in your browser. No data is stored or transmitted to our servers.</p>
+          </div>
+          <div class="footer-credits">
+            <p>Made with <span class="heart">❤️</span> for the developer community</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <script src="../js/utils.js" defer></script>
+  <script src="../js/ui.js" defer></script>
+  <script src="../js/mobile-menu.js" defer></script>
+</body>
+</html>

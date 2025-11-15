@@ -1,0 +1,283 @@
+================================================================================
+MARKDOWN VIEWER - DEPLOYMENT GUIDE FOR SHARED HOSTING
+================================================================================
+
+Project: Markdown Viewer
+Version: 2.1.4
+Type: Static Website (HTML/CSS/JavaScript)
+Date: November 13, 2025
+
+================================================================================
+WHAT'S INCLUDED
+================================================================================
+
+✓ HTML Pages (17 files)
+  - index.html (Homepage)
+  - editor.html (Advanced Editor)
+  - blog.html (Blog listing)
+  - blog/*.html (5 blog posts)
+  - about.html, contact.html, help.html
+  - markdown-guide.html
+  - privacy.html, terms.html, dmca.html
+  - sitemap-page.html
+  - 404.html
+
+✓ CSS Files (6 files)
+  - css/main.css (Main styles)
+  - css/themes.css (Theme variables)
+  - css/markdown.css (Markdown content styles)
+  - css/blog.css (Blog-specific styles)
+  - css/dark-mode-fixes.css (Dark mode fixes)
+  - css/editor.css (Editor styles)
+
+✓ JavaScript Files (15 files)
+  - js/app.js (Main application)
+  - js/ui.js (UI controller)
+  - js/utils.js (Utility functions)
+  - js/markdown-parser.js (Markdown parsing)
+  - js/storage.js (Local storage)
+  - js/search.js (Search functionality)
+  - js/dark-mode.js (Dark mode toggle)
+  - js/export*.js (Export functionality)
+  - js/editor*.js (Editor functionality)
+  - js/mobile-menu.js (Mobile navigation)
+
+✓ Configuration Files
+  - .htaccess (URL rewriting, security)
+  - robots.txt (Search engine instructions)
+  - sitemap.xml (SEO sitemap)
+  - llms.txt (AI/LLM information)
+
+✓ Assets
+  - assets/examples/sample.md (Sample markdown file)
+
+================================================================================
+DEPLOYMENT STEPS
+================================================================================
+
+STEP 1: PREPARE YOUR HOSTING
+-----------------------------
+□ Access your shared hosting control panel (cPanel, Plesk, etc.)
+□ Navigate to File Manager or use FTP client
+□ Locate your public_html or www directory
+
+STEP 2: UPLOAD FILES
+--------------------
+□ Upload ALL files maintaining the directory structure:
+  
+  public_html/
+  ├── index.html
+  ├── editor.html
+  ├── blog.html
+  ├── .htaccess
+  ├── robots.txt
+  ├── sitemap.xml
+  ├── blog/
+  │   ├── 10-reasons-markdown-documentation.html
+  │   ├── markdown-vs-rich-text-editors.html
+  │   ├── convert-markdown-to-pdf.html
+  │   ├── readme-best-practices.html
+  │   └── markdown-cheat-sheet.html
+  ├── css/
+  │   ├── main.css
+  │   ├── themes.css
+  │   ├── markdown.css
+  │   ├── blog.css
+  │   ├── dark-mode-fixes.css
+  │   └── editor.css
+  ├── js/
+  │   ├── app.js
+  │   ├── ui.js
+  │   ├── utils.js
+  │   └── [all other JS files]
+  └── assets/
+      └── examples/
+          └── sample.md
+
+IMPORTANT: Make sure .htaccess is uploaded (it's hidden by default)
+
+STEP 3: VERIFY .HTACCESS
+-------------------------
+□ Ensure .htaccess is in the root directory
+□ Check file permissions: 644 (rw-r--r--)
+□ If using Nginx instead of Apache, convert rules to nginx.conf
+
+STEP 4: TEST THE DEPLOYMENT
+----------------------------
+□ Visit your domain: https://yourdomain.com
+□ Test homepage loads correctly
+□ Test navigation links work
+□ Test dark mode toggle
+□ Test markdown viewer functionality:
+  - Upload a .md file
+  - Paste markdown text
+  - Load from URL
+□ Test blog posts load correctly
+□ Test on mobile devices
+
+STEP 5: VERIFY SEO FILES
+-------------------------
+□ Check robots.txt: https://yourdomain.com/robots.txt
+□ Check sitemap.xml: https://yourdomain.com/sitemap.xml
+□ Submit sitemap to Google Search Console
+□ Submit sitemap to Bing Webmaster Tools
+
+================================================================================
+SERVER REQUIREMENTS
+================================================================================
+
+MINIMUM REQUIREMENTS:
+✓ Web server: Apache 2.4+ or Nginx 1.18+
+✓ PHP: NOT required (static site)
+✓ Database: NOT required
+✓ HTTPS: Recommended (for security)
+✓ Gzip compression: Recommended (for performance)
+
+RECOMMENDED APACHE MODULES:
+✓ mod_rewrite (for .htaccess URL rewriting)
+✓ mod_deflate (for gzip compression)
+✓ mod_expires (for browser caching)
+✓ mod_headers (for security headers)
+
+================================================================================
+TROUBLESHOOTING
+================================================================================
+
+ISSUE: 404 errors on pages
+SOLUTION: 
+- Verify .htaccess is uploaded
+- Check mod_rewrite is enabled
+- Verify file permissions (644 for files, 755 for directories)
+
+ISSUE: CSS/JS not loading
+SOLUTION:
+- Check file paths are correct
+- Verify css/ and js/ directories uploaded
+- Check browser console for errors
+- Clear browser cache
+
+ISSUE: Dark mode not working
+SOLUTION:
+- Check js/dark-mode.js is uploaded
+- Verify browser console for JavaScript errors
+- Test in different browsers
+
+ISSUE: Blog posts not loading
+SOLUTION:
+- Verify blog/ directory uploaded
+- Check all 5 blog HTML files are present
+- Test direct URLs: /blog/10-reasons-markdown-documentation.html
+
+ISSUE: Markdown viewer not working
+SOLUTION:
+- Check all JS files in js/ directory uploaded
+- Verify browser console for errors
+- Test with sample markdown text
+
+================================================================================
+PERFORMANCE OPTIMIZATION
+================================================================================
+
+AFTER DEPLOYMENT:
+□ Enable Gzip compression in cPanel or .htaccess
+□ Enable browser caching (already in .htaccess)
+□ Consider using a CDN for static assets
+□ Optimize images if you add any
+□ Enable HTTPS (Let's Encrypt is free)
+□ Test page speed with Google PageSpeed Insights
+
+================================================================================
+SECURITY CHECKLIST
+================================================================================
+
+□ HTTPS enabled (SSL certificate installed)
+□ .htaccess security headers active
+□ File permissions correct (644 for files, 755 for dirs)
+□ No sensitive files exposed (all cleaned up)
+□ robots.txt configured correctly
+□ Regular backups enabled
+
+================================================================================
+POST-DEPLOYMENT CHECKLIST
+================================================================================
+
+□ Homepage loads correctly
+□ All navigation links work
+□ Dark mode toggle works
+□ Markdown viewer functions:
+  □ File upload works
+  □ Text input works
+  □ URL loading works
+  □ Export functions work
+□ All blog posts accessible
+□ Mobile responsive design works
+□ robots.txt accessible
+□ sitemap.xml accessible
+□ 404 page works
+□ Contact form works (if applicable)
+□ Search functionality works
+□ Editor page works
+
+================================================================================
+MAINTENANCE
+================================================================================
+
+REGULAR TASKS:
+- Monitor Google Search Console for errors
+- Check analytics for traffic and issues
+- Update content as needed
+- Backup files regularly
+- Monitor server logs for errors
+
+UPDATING CONTENT:
+- Blog posts: Add new HTML files to blog/ directory
+- Update sitemap.xml when adding new pages
+- Update blog.html to list new posts
+
+================================================================================
+SUPPORT & RESOURCES
+================================================================================
+
+If you encounter issues:
+1. Check browser console for JavaScript errors (F12)
+2. Check server error logs in cPanel
+3. Verify all files uploaded correctly
+4. Test in different browsers
+5. Clear browser cache and test again
+
+Common hosting providers:
+- cPanel: Most common, supports .htaccess
+- Plesk: Similar to cPanel
+- DirectAdmin: Alternative control panel
+- Custom: May need nginx configuration instead of .htaccess
+
+================================================================================
+SUCCESS INDICATORS
+================================================================================
+
+Your deployment is successful when:
+✓ Homepage loads in under 3 seconds
+✓ All pages accessible without errors
+✓ Dark mode toggle works smoothly
+✓ Markdown viewer processes files correctly
+✓ Mobile version displays properly
+✓ No console errors in browser
+✓ SEO files (robots.txt, sitemap.xml) accessible
+✓ HTTPS working (green padlock in browser)
+
+================================================================================
+DEPLOYMENT COMPLETE!
+================================================================================
+
+Your Markdown Viewer is now ready for production use!
+
+Next steps:
+1. Test thoroughly on your domain
+2. Submit sitemap to search engines
+3. Set up Google Analytics (optional)
+4. Monitor for any issues
+5. Enjoy your deployed site!
+
+For questions or issues, check the browser console and server logs first.
+
+================================================================================

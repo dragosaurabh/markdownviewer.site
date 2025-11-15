@@ -1,0 +1,65 @@
+Performance Implementation Checklist
+=====================================
+
+AUTOMATED (Already Done):
+✓ Added defer attribute to all JavaScript
+✓ Created minification guides
+
+MANUAL STEPS REQUIRED:
+
+□ Step 1: Inline Critical CSS in index.html
+  - Open css/critical.css
+  - Copy all contents
+  - Paste into <style> tag in <head> of index.html
+  - Place BEFORE other CSS links
+
+□ Step 2: Defer Non-Critical CSS in index.html
+  Replace:
+    <link rel="stylesheet" href="css/main.css">
+  With:
+    <link rel="preload" href="css/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="css/main.css"></noscript>
+
+□ Step 3: Add Resource Hints in index.html <head>
+  Add these lines:
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+
+□ Step 4: Defer Prism.js in index.html
+  Replace:
+    <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+  With:
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+□ Step 5: Minify CSS Files
+  - Follow CSS_MINIFICATION_GUIDE.txt
+  - Create .min.css versions of all CSS files
+  - Update HTML to reference .min.css files
+
+□ Step 6: Minify JavaScript Files
+  - Follow JS_MINIFICATION_GUIDE.txt
+  - Create .min.js versions of all JS files
+  - Update HTML to reference .min.js files
+
+□ Step 7: Test with PageSpeed Insights
+  - Visit: https://pagespeed.web.dev/
+  - Enter your URL
+  - Check scores
+  - Iterate if needed
+
+□ Step 8: Deploy to Production
+  - Upload all optimized files
+  - Clear CDN cache if using one
+  - Test live site
+
+EXPECTED IMPROVEMENTS:
+- Performance Score: 60 → 90+
+- First Contentful Paint: 3s → 1.5s
+- Largest Contentful Paint: 4s → 2.5s
+- Total Blocking Time: 400ms → 150ms
+
+ROLLBACK:
+If issues occur, restore from backups:
+  cp index.html.backup index.html
+  cp -r js.backup/* js/
+  cp -r css.backup/* css/

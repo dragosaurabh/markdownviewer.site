@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced Markdown Editor - Create SEO-Optimized Content | Markdown Viewer</title>
+  <meta name="title" content="Advanced Markdown Editor - Create SEO-Optimized Content">
+  <meta name="description" content="Professional markdown editor with real-time preview, SEO analysis, AI-powered suggestions, and comprehensive formatting tools. Create optimized content for search engines and AI systems.">
+  <meta name="keywords" content="markdown editor, SEO editor, content editor, markdown writer, AI content optimization, LLM friendly editor, real-time preview, markdown tools">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Markdown Viewer">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.markdownviewer.site/editor.html">
+  <meta property="og:title" content="Advanced Markdown Editor - SEO & AI Optimized">
+  <meta property="og:description" content="Create professional, SEO-optimized markdown content with real-time preview and AI-powered suggestions.">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://www.markdownviewer.site/editor.html">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/main.css?v=2.1.4">
+  <link rel="stylesheet" href="css/themes.css?v=2.1.4">
+  <link rel="stylesheet" href="css/dark-mode-fixes.css">
+  <link rel="stylesheet" href="css/markdown.css?v=2.1.4">
+  <link rel="stylesheet" href="css/editor.css?v=2.1.4">
+  
+  <!-- Prism.js -->
+  <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" id="prism-theme">
+  
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Advanced Markdown Editor",
+    "description": "Professional markdown editor with SEO analysis and AI-powered content optimization",
+    "url": "https://www.markdownviewer.site/editor.html",
+    "applicationCategory": "UtilitiesApplication",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "featureList": [
+      "Real-time markdown preview",
+      "SEO content analysis",
+      "AI-powered suggestions",
+      "Comprehensive formatting toolbar",
+      "Auto-save and version history",
+      "Multiple export formats"
+    ]
+  }
+  </script>
+</head>
+<body>
+  <!-- Skip to Content -->
+  <a href="#editor-main" class="skip-link">Skip to editor</a>
+  
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <a href="/" style="display: flex; align-items: center; gap: 0.5rem; text-decoration: none; color: inherit;">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <rect width="32" height="32" rx="6" fill="currentColor" opacity="0.1"/>
+              <path d="M8 12h16M8 16h16M8 20h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <span>Markdown Editor</span>
+          </a>
+        </div>
+        <nav class="nav" aria-label="Main navigation">
+          <a href="index.html">Viewer</a>
+          <a href="editor.html" class="active">Editor</a>
+          <a href="help.html">Help</a>
+          <a href="markdown-guide.html">Guide</a>
+          <button id="dark-mode-toggle" class="btn-icon" aria-label="Toggle dark mode">
+            <svg class="icon-sun" width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <circle cx="10" cy="10" r="4" stroke="currentColor" stroke-width="2"/>
+              <path d="M10 2v2M10 16v2M18 10h-2M4 10H2M15.66 4.34l-1.41 1.41M5.75 14.25l-1.41 1.41M15.66 15.66l-1.41-1.41M5.75 5.75L4.34 4.34" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <svg class="icon-moon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path d="M17 10.5A7 7 0 1 1 9.5 3a5.5 5.5 0 0 0 7.5 7.5z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Editor -->
+  <main id="editor-main" class="editor-container">
+    <!-- Toolbar -->
+    <div class="editor-toolbar" role="toolbar" aria-label="Formatting toolbar">
+      <div class="toolbar-group" aria-label="Headings">
+        <button class="toolbar-btn" data-action="heading" data-level="1" title="Heading 1 (Ctrl+1)" aria-label="Heading 1">
+          <span class="toolbar-icon">H1</span>
+        </button>
+        <button class="toolbar-btn" data-action="heading" data-level="2" title="Heading 2 (Ctrl+2)" aria-label="Heading 2">
+          <span class="toolbar-icon">H2</span>
+        </button>
+        <button class="toolbar-btn" data-action="heading" data-level="3" title="Heading 3 (Ctrl+3)" aria-label="Heading 3">
+          <span class="toolbar-icon">H3</span>
+        </button>
+      </div>
+      
+      <div class="toolbar-divider"></div>
+      
+      <div class="toolbar-group" aria-label="Text formatting">
+        <button class="toolbar-btn" data-action="bold" title="Bold (Ctrl+B)" aria-label="Bold">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M4 2h5a3 3 0 0 1 0 6H4V2z" stroke="currentColor" stroke-width="2"/>
+            <path d="M4 8h6a3 3 0 0 1 0 6H4V8z" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        </button>
+        <button class="toolbar-btn" data-action="italic" title="Italic (Ctrl+I)" aria-label="Italic">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M6 2h6M4 14h6M10 2l-4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <button class="toolbar-btn" data-action="strikethrough" title="Strikethrough" aria-label="Strikethrough">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M2 8h12M5 4h6M5 12h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <button class="toolbar-btn" data-action="code" title="Inline Code (Ctrl+`)" aria-label="Inline code">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M5 4L2 8l3 4M11 4l3 4-3 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+      
+      <div class="toolbar-divider"></div>
+      
+      <div class="toolbar-group" aria-label="Insert elements">
+        <button class="toolbar-btn" data-action="link" title="Insert Link (Ctrl+K)" aria-label="Insert link">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M6 10a4 4 0 0 0 5.657 0l2.828-2.828A4 4 0 0 0 8.828 1.515L7.414 2.929" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path d="M10 6a4 4 0 0 0-5.657 0L1.515 8.828a4 4 0 0 0 5.657 5.657l1.414-1.414" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <button class="toolbar-btn" data-action="image" title="Insert Image (Ctrl+Shift+I)" aria-label="Insert image">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <rect x="2" y="2" width="12" height="12" rx="1" stroke="currentColor" stroke-width="2"/>
+            <circle cx="6" cy="6" r="1.5" fill="currentColor"/>
+            <path d="M14 10l-3-3-4 4-2-2-3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <button class="toolbar-btn" data-action="table" title="Insert Table" aria-label="Insert table">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <rect x="2" y="2" width="12" height="12" rx="1" stroke="currentColor" stroke-width="2"/>
+            <path d="M2 6h12M8 6v8" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        </button>
+        <button class="toolbar-btn" data-action="code-block" title="Insert Code Block" aria-label="Insert code block">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <rect x="2" y="3" width="12" height="10" rx="1" stroke="currentColor" stroke-width="2"/>
+            <path d="M5 7l-1.5 1.5L5 10M11 7l1.5 1.5L11 10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+      
+      <div class="toolbar-divider"></div>
+      
+      <div class="toolbar-group" aria-label="Lists">
+        <button class="toolbar-btn" data-action="ul" title="Bullet List" aria-label="Bullet list">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <circle cx="3" cy="4" r="1" fill="currentColor"/>
+            <circle cx="3" cy="8" r="1" fill="currentColor"/>
+            <circle cx="3" cy="12" r="1" fill="currentColor"/>
+            <path d="M6 4h8M6 8h8M6 12h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <button class="toolbar-btn" data-action="ol" title="Numbered List" aria-label="Numbered list">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <text x="1" y="6" font-size="6" fill="currentColor">1.</text>
+            <text x="1" y="10" font-size="6" fill="currentColor">2.</text>
+            <text x="1" y="14" font-size="6" fill="currentColor">3.</text>
+            <path d="M6 4h8M6 8h8M6 12h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <button class="toolbar-btn" data-action="task" title="Task List" aria-label="Task list">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <rect x="2" y="3" width="3" height="3" rx="0.5" stroke="currentColor" stroke-width="1.5"/>
+            <rect x="2" y="7" width="3" height="3" rx="0.5" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M3 4.5l0.5 0.5 1-1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M7 4h7M7 8h7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <button class="toolbar-btn" data-action="blockquote" title="Blockquote" aria-label="Blockquote">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M3 4v8M6 6h8M6 10h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+      
+      <div class="toolbar-divider"></div>
+      
+      <div class="toolbar-group" aria-label="Utilities">
+        <button class="toolbar-btn" data-action="undo" title="Undo (Ctrl+Z)" aria-label="Undo">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M3 7h8a3 3 0 0 1 0 6H8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path d="M6 4L3 7l3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <button class="toolbar-btn" data-action="redo" title="Redo (Ctrl+Y)" aria-label="Redo">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M13 7H5a3 3 0 0 0 0 6h3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path d="M10 4l3 3-3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <button class="toolbar-btn" data-action="template" title="Load Template" aria-label="Load template">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <rect x="2" y="2" width="12" height="12" rx="1" stroke="currentColor" stroke-width="2"/>
+            <path d="M5 6h6M5 9h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+      
+      <div class="toolbar-spacer"></div>
+      
+      <div class="toolbar-group" aria-label="View options">
+        <button class="toolbar-btn" id="toggle-seo-panel" title="Toggle SEO Panel" aria-label="Toggle SEO panel">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M8 2L2 6v4l6 4 6-4V6L8 2z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+            <text x="5" y="10" font-size="6" fill="currentColor" font-weight="bold">S</text>
+          </svg>
+        </button>
+        <button class="toolbar-btn" id="toggle-ai-panel" title="Toggle AI Assistant" aria-label="Toggle AI assistant">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="2"/>
+            <path d="M8 5v3l2 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <button class="toolbar-btn" id="export-btn-editor" title="Export Document" aria-label="Export document">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M8 10V2m0 8l-3-3m3 3l3-3M2 12h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Editor Layout -->
+    <div class="editor-layout">
+      <!-- Left Sidebar - SEO Panel -->
+      <aside class="editor-sidebar left-sidebar" id="seo-panel" aria-label="SEO Analysis">
+        <div class="sidebar-header">
+          <h2>SEO Analysis</h2>
+          <button class="btn-icon sidebar-close" aria-label="Close SEO panel">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M12 4L4 12M4 4l8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </button>
+        </div>
+        <div class="sidebar-content">
+          <div class="seo-score-card">
+            <div class="score-circle" id="seo-score-circle">
+              <svg width="100" height="100" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="45" fill="none" stroke="#e5e7eb" stroke-width="8"/>
+                <circle cx="50" cy="50" r="45" fill="none" stroke="#3b82f6" stroke-width="8" 
+                        stroke-dasharray="283" stroke-dashoffset="283" id="seo-score-progress"/>
+              </svg>
+              <div class="score-text">
+                <span class="score-value" id="seo-score-value">0</span>
+                <span class="score-label">SEO Score</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="seo-metrics">
+            <div class="metric-item">
+              <span class="metric-label">📝 Word Count</span>
+              <span class="metric-value" id="word-count">0</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-label">⏱️ Reading Time</span>
+              <span class="metric-value" id="reading-time">0 min</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-label">📖 Readability</span>
+              <span class="metric-value" id="readability-score">-</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-label">🔗 Links</span>
+              <span class="metric-value" id="link-count">0</span>
+            </div>
+          </div>
+          
+          <div class="seo-suggestions" id="seo-suggestions">
+            <h3>Suggestions</h3>
+            <div class="suggestions-list" id="seo-suggestions-list">
+              <p class="empty-state">Start writing to see SEO suggestions...</p>
+            </div>
+          </div>
+        </div>
+      </aside>
+      
+      <!-- Main Editor Area -->
+      <div class="editor-main">
+        <!-- Editor Tabs (Mobile) -->
+        <div class="editor-tabs" role="tablist">
+          <button class="editor-tab active" role="tab" aria-selected="true" data-tab="editor">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M2 4h12M2 8h12M2 12h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            Editor
+          </button>
+          <button class="editor-tab" role="tab" aria-selected="false" data-tab="preview">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M8 3C4 3 1 8 1 8s3 5 7 5 7-5 7-5-3-5-7-5z" stroke="currentColor" stroke-width="2"/>
+              <circle cx="8" cy="8" r="2" stroke="currentColor" stroke-width="2"/>
+            </svg>
+            Preview
+          </button>
+        </div>
+        
+        <!-- Split View Container -->
+        <div class="split-view">
+          <!-- Editor Pane -->
+          <div class="editor-pane" id="editor-pane">
+            <div class="editor-header">
+              <div class="editor-status">
+                <span class="status-indicator" id="save-status">
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                    <circle cx="6" cy="6" r="5" fill="currentColor"/>
+                  </svg>
+                  <span id="save-status-text">Ready</span>
+                </span>
+                <span class="editor-stats">
+                  <span id="cursor-position">Ln 1, Col 1</span>
+                </span>
+              </div>
+            </div>
+            <div class="editor-wrapper">
+              <div class="line-numbers" id="line-numbers" aria-hidden="true"></div>
+              <textarea 
+                id="markdown-editor" 
+                class="markdown-editor" 
+                placeholder="Start writing your markdown here...&#10;&#10;# Heading 1&#10;## Heading 2&#10;&#10;**Bold text** and *italic text*&#10;&#10;- List item 1&#10;- List item 2"
+                aria-label="Markdown editor"
+                spellcheck="true"
+              ></textarea>
+            </div>
+          </div>
+          
+          <!-- Resizer -->
+          <div class="split-resizer" id="split-resizer" role="separator" aria-label="Resize editor and preview"></div>
+          
+          <!-- Preview Pane -->
+          <div class="preview-pane" id="preview-pane">
+            <div class="preview-header">
+              <h3>Live Preview</h3>
+              <div class="preview-controls">
+                <button class="btn-icon" id="sync-scroll-toggle" title="Toggle Scroll Sync" aria-label="Toggle scroll sync">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M2 8h12M8 2v12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="preview-content markdown-content" id="preview-content">
+              <div class="empty-state">
+                <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+                  <rect x="8" y="16" width="48" height="32" rx="2" stroke="currentColor" stroke-width="2"/>
+                  <path d="M16 24h32M16 32h32M16 40h20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <p>Preview will appear here</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Right Sidebar - AI Assistant -->
+      <aside class="editor-sidebar right-sidebar" id="ai-panel" aria-label="AI Assistant">
+        <div class="sidebar-header">
+          <h2>AI Assistant</h2>
+          <button class="btn-icon sidebar-close" aria-label="Close AI panel">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M12 4L4 12M4 4l8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </button>
+        </div>
+        <div class="sidebar-content">
+          <div class="ai-score-card">
+            <div class="ai-score">
+              <span class="ai-score-value" id="ai-score-value">-</span>
+              <span class="ai-score-label">AI Readability</span>
+            </div>
+          </div>
+          
+          <div class="ai-suggestions" id="ai-suggestions">
+            <h3>Content Suggestions</h3>
+            <div class="suggestions-list" id="ai-suggestions-list">
+              <p class="empty-state">AI suggestions will appear here...</p>
+            </div>
+          </div>
+          
+          <div class="ai-actions">
+            <button class="btn btn-secondary btn-block" id="analyze-content">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="2"/>
+                <path d="M8 5v3l2 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+              Analyze Content
+            </button>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <!-- Template Modal -->
+  <div class="modal" id="template-modal" role="dialog" aria-labelledby="template-modal-title" aria-hidden="true">
+    <div class="modal-overlay"></div>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 id="template-modal-title">Choose a Template</h2>
+        <button class="btn-icon modal-close" aria-label="Close modal">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path d="M15 5L5 15M5 5l10 10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="template-grid" id="template-grid">
+          <!-- Templates will be loaded here -->
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Link Insert Modal -->
+  <div class="modal" id="link-modal" role="dialog" aria-labelledby="link-modal-title" aria-hidden="true">
+    <div class="modal-overlay"></div>
+    <div class="modal-content modal-small">
+      <div class="modal-header">
+        <h2 id="link-modal-title">Insert Link</h2>
+        <button class="btn-icon modal-close" aria-label="Close modal">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path d="M15 5L5 15M5 5l10 10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="link-text">Link Text</label>
+          <input type="text" id="link-text" class="input" placeholder="Enter link text">
+        </div>
+        <div class="form-group">
+          <label for="link-url">URL</label>
+          <input type="url" id="link-url" class="input" placeholder="https://example.com">
+        </div>
+        <div class="modal-actions">
+          <button class="btn btn-secondary modal-close">Cancel</button>
+          <button class="btn btn-primary" id="insert-link-btn">Insert Link</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Image Insert Modal -->
+  <div class="modal" id="image-modal" role="dialog" aria-labelledby="image-modal-title" aria-hidden="true">
+    <div class="modal-overlay"></div>
+    <div class="modal-content modal-small">
+      <div class="modal-header">
+        <h2 id="image-modal-title">Insert Image</h2>
+        <button class="btn-icon modal-close" aria-label="Close modal">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path d="M15 5L5 15M5 5l10 10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="image-alt">Alt Text</label>
+          <input type="text" id="image-alt" class="input" placeholder="Describe the image">
+        </div>
+        <div class="form-group">
+          <label for="image-url">Image URL</label>
+          <input type="url" id="image-url" class="input" placeholder="https://example.com/image.jpg">
+        </div>
+        <div class="modal-actions">
+          <button class="btn btn-secondary modal-close">Cancel</button>
+          <button class="btn btn-primary" id="insert-image-btn">Insert Image</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Toast Notification -->
+  <div class="toast" id="toast" role="alert" aria-live="assertive" aria-atomic="true"></div>
+  
+  <!-- External Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/marked@11.0.0/marked.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.8/dist/purify.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js" defer></script>
+  
+  <!-- Application Scripts -->
+  <script src="js/utils.js?v=2.1.4" defer></script>
+  <script src="js/storage.js?v=2.1.4" defer></script>
+  <script src="js/markdown-parser.js?v=2.1.4" defer></script>
+  <script src="js/editor-core.js?v=2.1.4" defer></script>
+  <script src="js/editor-toolbar.js?v=2.1.4" defer></script>
+  <script src="js/editor-seo.js?v=2.1.4" defer></script>
+  <script src="js/editor-ai.js?v=2.1.4" defer></script>
+  <script src="js/editor-templates.js?v=2.1.4" defer></script>
+  <script src="js/editor-app.js?v=2.1.4" defer></script>
+  <script src="js/mobile-menu.js?v=2.1.4" defer></script>
+</body>
+</html>

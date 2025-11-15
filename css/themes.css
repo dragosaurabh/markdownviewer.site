@@ -1,0 +1,79 @@
+/* ===================================
+   Dark Mode Theme
+   =================================== */
+
+.dark-mode {
+  /* Primary Colors (slightly lighter for dark mode) */
+  --color-primary: #60A5FA;
+  --color-primary-hover: #3B82F6;
+  --color-secondary: #34D399;
+  
+  /* Dark Mode Colors */
+  --color-bg-primary: #1F2937;
+  --color-bg-secondary: #111827;
+  --color-bg-tertiary: #374151;
+  --color-text-primary: #F9FAFB;
+  --color-text-secondary: #9CA3AF;
+  --color-text-tertiary: #6B7280;
+  --color-border: #374151;
+  --color-border-light: #4B5563;
+  
+  /* Code Block Colors */
+  --color-code-bg: #111827;
+  --color-code-text: #E5E7EB;
+  --color-code-border: #374151;
+  
+  /* Interactive Element Colors */
+  --color-link: #60A5FA;
+  --color-link-hover: #93C5FD;
+  --color-success: #34D399;
+  --color-error: #F87171;
+  --color-warning: #FBBF24;
+  --color-info: #60A5FA;
+  
+  /* Shadow Variables (darker for dark mode) */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.5);
+  --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.6);
+}
+
+/* Dark mode specific adjustments */
+.dark-mode .btn-secondary {
+  background: var(--color-bg-tertiary);
+  color: var(--color-text-primary);
+}
+
+.dark-mode .btn-secondary:hover {
+  background: var(--color-border-light);
+}
+
+.dark-mode .upload-area {
+  background: var(--color-bg-secondary);
+}
+
+.dark-mode .feature-card:hover {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Smooth theme transition */
+body,
+.header,
+.hero,
+.btn,
+.input,
+.select,
+.text-input,
+.markdown-content,
+.feature-card,
+.faq-item,
+.footer {
+  transition: background-color var(--transition-base), 
+              color var(--transition-base), 
+              border-color var(--transition-base);
+}
+
+/* Prism.js theme switching */
+.dark-mode #prism-theme {
+  /* Will be handled by JavaScript to load dark theme */
+}

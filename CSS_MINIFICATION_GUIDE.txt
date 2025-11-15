@@ -1,0 +1,24 @@
+CSS Minification Guide
+======================
+
+To minify CSS files, use one of these methods:
+
+METHOD 1: Online Tool
+- Visit: https://cssminifier.com/
+- Paste CSS content
+- Copy minified output
+- Save as filename.min.css
+
+METHOD 2: Command Line (if Node.js installed)
+npm install -g cssnano-cli
+cssnano css/main.css css/main.min.css
+cssnano css/themes.css css/themes.min.css
+cssnano css/markdown.css css/markdown.min.css
+cssnano css/blog.css css/blog.min.css
+
+METHOD 3: VS Code Extension
+- Install "Minify" extension
+- Right-click CSS file
+- Select "Minify"
+
+After minifying, update HTML files to use .min.css versions.

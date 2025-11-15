@@ -1,0 +1,192 @@
+/* ===================================
+   Dark Mode Code Block Fixes
+   Universal fixes for code visibility
+   =================================== */
+
+/* Code Blocks - Pre elements */
+.dark-mode pre,
+.dark-mode .markdown-content pre,
+.dark-mode .content-section pre,
+.dark-mode .syntax-example pre {
+  background: #1e1e1e !important;
+  border-color: #374151 !important;
+  color: #e5e7eb !important;
+}
+
+.dark-mode pre code,
+.dark-mode .markdown-content pre code,
+.dark-mode .content-section pre code,
+.dark-mode .syntax-example pre code {
+  background: transparent !important;
+  color: #e5e7eb !important;
+  border: none !important;
+}
+
+/* Inline Code */
+.dark-mode code,
+.dark-mode .markdown-content code,
+.dark-mode .content-section code,
+.dark-mode .syntax-example code {
+  background: #374151 !important;
+  color: #fbbf24 !important;
+  border-color: #4b5563 !important;
+}
+
+/* Override for code inside pre (block code) */
+.dark-mode pre code,
+.dark-mode .markdown-content pre code,
+.dark-mode .content-section pre code {
+  background: transparent !important;
+  color: #e5e7eb !important;
+}
+
+/* Tables */
+.dark-mode table,
+.dark-mode .markdown-content table,
+.dark-mode .content-section table {
+  border-color: #374151 !important;
+}
+
+.dark-mode table th,
+.dark-mode table td,
+.dark-mode .markdown-content table th,
+.dark-mode .markdown-content table td,
+.dark-mode .content-section table th,
+.dark-mode .content-section table td {
+  border-color: #374151 !important;
+  color: #f9fafb !important;
+}
+
+.dark-mode table thead,
+.dark-mode .markdown-content table thead,
+.dark-mode .content-section table thead {
+  background: #374151 !important;
+}
+
+/* Blockquotes */
+.dark-mode blockquote,
+.dark-mode .markdown-content blockquote,
+.dark-mode .content-section blockquote {
+  border-left-color: #60a5fa !important;
+  color: #9ca3af !important;
+}
+
+/* Horizontal Rules */
+.dark-mode hr,
+.dark-mode .markdown-content hr,
+.dark-mode .content-section hr {
+  border-color: #374151 !important;
+}
+
+/* Text Colors */
+.dark-mode .markdown-content h1,
+.dark-mode .markdown-content h2,
+.dark-mode .markdown-content h3,
+.dark-mode .markdown-content h4,
+.dark-mode .markdown-content h5,
+.dark-mode .markdown-content h6,
+.dark-mode .content-section h1,
+.dark-mode .content-section h2,
+.dark-mode .content-section h3,
+.dark-mode .content-section h4 {
+  color: #f9fafb !important;
+}
+
+.dark-mode .markdown-content p,
+.dark-mode .markdown-content li,
+.dark-mode .content-section p,
+.dark-mode .content-section li {
+  color: #e5e7eb !important;
+}
+
+/* Links */
+.dark-mode .markdown-content a,
+.dark-mode .content-section a {
+  color: #60a5fa !important;
+}
+
+.dark-mode .markdown-content a:hover,
+.dark-mode .content-section a:hover {
+  color: #93c5fd !important;
+}
+
+/* Details/Summary */
+.dark-mode details,
+.dark-mode .markdown-content details {
+  background: #374151 !important;
+  border-color: #4b5563 !important;
+}
+
+.dark-mode summary:hover,
+.dark-mode .markdown-content summary:hover {
+  background: #4b5563 !important;
+}
+
+/* Syntax Examples */
+.dark-mode .syntax-example {
+  background: #1f2937 !important;
+  border-color: #374151 !important;
+}
+
+.dark-mode .example-output {
+  background: #374151 !important;
+  color: #e5e7eb !important;
+}
+
+/* Blog Tags */
+.dark-mode .blog-tags .tag,
+.dark-mode .tag {
+  background: #374151 !important;
+  color: #f9fafb !important;
+}
+
+.dark-mode .blog-tags .tag:hover,
+.dark-mode .tag:hover {
+  background: #4b5563 !important;
+}
+
+/* Reading Mode */
+.dark-mode.reading-mode .markdown-content {
+  background: #1f2937 !important;
+  color: #e5e7eb !important;
+}
+
+.dark-mode.reading-mode .markdown-content pre {
+  background: #111827 !important;
+}
+
+.dark-mode.reading-mode .markdown-content code {
+  background: #374151 !important;
+  color: #fbbf24 !important;
+}
+
+/* Light Mode - Ensure visibility */
+body:not(.dark-mode) pre,
+body:not(.dark-mode) .markdown-content pre,
+body:not(.dark-mode) .content-section pre {
+  background: #f6f8fa;
+  border-color: #e1e4e8;
+  color: #24292e;
+}
+
+body:not(.dark-mode) pre code,
+body:not(.dark-mode) .markdown-content pre code,
+body:not(.dark-mode) .content-section pre code {
+  background: transparent;
+  color: #24292e;
+}
+
+body:not(.dark-mode) code,
+body:not(.dark-mode) .markdown-content code,
+body:not(.dark-mode) .content-section code {
+  background: #f6f8fa;
+  color: #e83e8c;
+  border-color: #e1e4e8;
+}
+
+/* Ensure code in pre doesn't get inline code styling */
+body:not(.dark-mode) pre code {
+  background: transparent;
+  color: inherit;
+  border: none;
+}

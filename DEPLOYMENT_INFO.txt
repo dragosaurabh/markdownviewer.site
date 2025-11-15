@@ -1,0 +1,37 @@
+Markdown Viewer - Production Deployment
+========================================
+
+Deployment Date: $(date)
+Version: 2.1.4
+
+Files Included:
+- HTML pages (index.html, blog pages, etc.)
+- CSS files (css/*.css)
+- JavaScript files (js/*.js)
+- Assets (assets/*)
+- Configuration files (.htaccess, robots.txt, sitemap.xml)
+
+Deployment Instructions:
+1. Upload all files to your web hosting root directory
+2. Ensure .htaccess is uploaded (for URL rewriting)
+3. Verify robots.txt and sitemap.xml are accessible
+4. Test the site at your domain
+
+Required Server Configuration:
+- PHP: Not required (static site)
+- Apache/Nginx: Yes (for .htaccess or equivalent)
+- HTTPS: Recommended
+- Gzip compression: Recommended
+
+Post-Deployment Checklist:
+□ Test homepage loads correctly
+□ Test all navigation links
+□ Test dark mode toggle
+□ Test markdown viewer functionality
+□ Test blog posts load correctly
+□ Verify sitemap.xml is accessible
+□ Submit sitemap to Google Search Console
+□ Test on mobile devices
+
+Support:
+For issues, check the console for errors and verify all files uploaded correctly.

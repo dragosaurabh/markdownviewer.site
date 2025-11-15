@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Help & FAQ - Markdown Viewer Guide | Markdown Viewer</title>
+  <meta name="description" content="Get help with Markdown Viewer. Find answers to common questions about viewing markdown files, troubleshooting, features, and more.">
+  <link rel="canonical" href="https://www.markdownviewer.site/help.html">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/themes.css">
+  <link rel="stylesheet" href="css/dark-mode-fixes.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I view a markdown file online?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can view markdown files in three ways: 1) Paste a URL to your markdown file in the URL tab, 2) Upload a file from your device using the Upload tab, or 3) Paste or type markdown text directly in the Text tab. The viewer will instantly render your markdown with proper formatting."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is my markdown file data secure?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes! All markdown processing happens entirely in your browser using JavaScript. Your files never leave your device, and we don't store or have access to your content. This ensures complete privacy and security."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What markdown syntax is supported?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We support full GitHub Flavored Markdown (GFM) including headers, bold, italic, links, images, code blocks with syntax highlighting, tables, blockquotes, lists, task lists, and more."
+        }
+      }
+    ]
+  }
+  </script>
+  <script src="js/dark-mode.js" defer></script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <a href="index.html" style="display: flex; align-items: center; gap: 0.5rem; text-decoration: none; color: inherit;">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+              <rect width="32" height="32" rx="6" fill="currentColor" opacity="0.1"/>
+              <path d="M8 12h16M8 16h16M8 20h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <span>Markdown Viewer</span>
+          </a>
+        </div>
+        <nav class="nav">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="help.html" class="active">Help</a>
+          <a href="markdown-guide.html">Guide</a>
+          <a href="blog.html">Blog</a>
+          <a href="contact.html">Contact</a>
+                  <button id="dark-mode-toggle" class="btn-icon" aria-label="Toggle dark mode" title="Toggle dark mode">
+            <svg class="icon-sun" width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <circle cx="10" cy="10" r="4" stroke="currentColor" stroke-width="2"/>
+              <path d="M10 2v2M10 16v2M18 10h-2M4 10H2M15.66 4.34l-1.41 1.41M5.75 14.25l-1.41 1.41M15.66 15.66l-1.41-1.41M5.75 5.75L4.34 4.34" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <svg class="icon-moon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path d="M17 10.5A7 7 0 1 1 9.5 3a5.5 5.5 0 0 0 7.5 7.5z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <article class="content-page">
+      <div class="container">
+        <div class="content-wrapper">
+          <h1>Help & Frequently Asked Questions</h1>
+          
+          <section class="content-section">
+            <h2>Getting Started</h2>
+            <p>Welcome to Markdown Viewer! This guide will help you get started with viewing and converting your markdown files online. Whether you're new to markdown or an experienced user, you'll find everything you need to know right here.</p>
+            
+            <h3>Quick Start Guide</h3>
+            <ol>
+              <li><strong>Choose Your Input Method:</strong> Select from URL, Upload, or Text tabs at the top of the page</li>
+              <li><strong>Load Your Markdown:</strong> Paste a URL, upload a file, or type/paste markdown text</li>
+              <li><strong>View Instantly:</strong> Your markdown is rendered immediately with beautiful formatting</li>
+              <li><strong>Customize:</strong> Adjust font size, content width, or enable dark mode</li>
+              <li><strong>Export:</strong> Download as HTML, copy to clipboard, or share with others</li>
+            </ol>
+          </section>
+
+          <section class="content-section">
+            <h2>Frequently Asked Questions</h2>
+            
+            <div class="faq-item">
+              <h3>How do I view a markdown file online?</h3>
+              <p>Viewing markdown files with Markdown Viewer is simple and can be done in three ways:</p>
+              <ul>
+                <li><strong>URL Method:</strong> Click the "URL" tab, paste the direct link to your markdown file (like a GitHub raw URL), and click "Load". The file will be fetched and rendered instantly.</li>
+                <li><strong>Upload Method:</strong> Click the "Upload" tab, then either drag and drop your .md file onto the upload area or click "Choose File" to browse your computer. Files up to 5MB are supported.</li>
+                <li><strong>Text Method:</strong> Click the "Text" tab and paste or type your markdown content directly into the text area. The preview updates automatically as you type.</li>
+              </ul>
+            </div>
+
+            <div class="faq-item">
+              <h3>Is my markdown file data secure?</h3>
+              <p>Absolutely! Security and privacy are our top priorities. All markdown processing happens entirely in your web browser using client-side JavaScript. This means:</p>
+              <ul>
+                <li>Your files never leave your device</li>
+                <li>We don't upload, store, or have any access to your content</li>
+                <li>No server communication is required for file upload or text input</li>
+                <li>Even when fetching from URLs, the content is retrieved directly by your browser</li>
+              </ul>
+              <p>You can even use Markdown Viewer offline (after the initial page load) for the upload and text input features.</p>
+            </div>
+
+            <div class="faq-item">
+              <h3>What markdown syntax is supported?</h3>
+              <p>Markdown Viewer supports full GitHub Flavored Markdown (GFM), which includes:</p>
+              <ul>
+                <li><strong>Basic Formatting:</strong> Headers (H1-H6), bold, italic, strikethrough</li>
+                <li><strong>Links and Images:</strong> Inline links, reference links, images with alt text</li>
+                <li><strong>Lists:</strong> Ordered lists, unordered lists, nested lists</li>
+                <li><strong>Code:</strong> Inline code, fenced code blocks with syntax highlighting for 200+ languages</li>
+                <li><strong>Tables:</strong> Full table support with alignment options</li>
+                <li><strong>Blockquotes:</strong> Single and nested blockquotes</li>
+                <li><strong>Task Lists:</strong> Checkboxes for to-do lists</li>
+                <li><strong>Horizontal Rules:</strong> Dividers using ---, ***, or ___</li>
+                <li><strong>HTML:</strong> Safe HTML rendering (sanitized for security)</li>
+              </ul>
+              <p>For a complete syntax guide with examples, visit our <a href="markdown-guide.html">Markdown Guide</a>.</p>
+            </div>
+
+            <div class="faq-item">
+              <h3>How do I export my rendered markdown?</h3>
+              <p>Markdown Viewer offers several export options:</p>
+              <ul>
+                <li><strong>Download as HTML:</strong> Click the download icon in the toolbar to save a standalone HTML file that includes all styling and can be opened in any browser.</li>
+                <li><strong>Copy HTML:</strong> Click the copy icon to copy the rendered HTML to your clipboard for pasting into other applications.</li>
+                <li><strong>Print/PDF:</strong> Use your browser's print function (Ctrl+P or Cmd+P) and select "Save as PDF" to create a PDF version.</li>
+                <li><strong>Share Link:</strong> Click the share icon to generate a shareable URL that includes your markdown content (note: links may be long for large documents).</li>
+              </ul>
+            </div>
+
+            <div class="faq-item">
+              <h3>Can I use Markdown Viewer offline?</h3>
+              <p>Yes, partially! Once you've loaded the Markdown Viewer page, you can use the file upload and text input features completely offline. The URL fetching feature requires an internet connection since it needs to retrieve files from external sources. The page uses browser caching, so subsequent visits load faster.</p>
+            </div>
+
+            <div class="faq-item">
+              <h3>What file formats are supported?</h3>
+              <p>Markdown Viewer accepts files with the following extensions:</p>
+              <ul>
+                <li>.md (standard markdown files)</li>
+                <li>.markdown (alternative markdown extension)</li>
+                <li>.txt (plain text files with markdown syntax)</li>
+              </ul>
+              <p>The maximum file size is 5MB. If you need to view larger files, consider breaking them into smaller sections or using the text input method to paste specific portions.</p>
+            </div>
+
+            <div class="faq-item">
+              <h3>How do I enable dark mode?</h3>
+              <p>Dark mode can be enabled in two ways:</p>
+              <ul>
+                <li><strong>Automatic:</strong> Markdown Viewer automatically detects your system's dark mode preference and applies it.</li>
+                <li><strong>Manual Toggle:</strong> Click the sun/moon icon in the top-right corner of the page to manually switch between light and dark modes. Your preference is saved locally.</li>
+              </ul>
+              <p>Dark mode applies to both the interface and the rendered markdown content for comfortable reading in low-light conditions.</p>
+            </div>
+
+            <div class="faq-item">
+              <h3>What is the Table of Contents feature?</h3>
+              <p>The Table of Contents (TOC) is automatically generated from the headers in your markdown document. It appears in the left sidebar (on desktop) and provides:</p>
+              <ul>
+                <li>Quick navigation to any section of your document</li>
+                <li>Hierarchical structure showing document organization</li>
+                <li>Active highlighting of the current section as you scroll</li>
+                <li>Collapsible on mobile devices to save screen space</li>
+              </ul>
+              <p>The TOC is generated automatically whenever you load markdown content with headers (H1, H2, H3, etc.).</p>
+            </div>
+
+            <div class="faq-item">
+              <h3>How do I search within my markdown document?</h3>
+              <p>Markdown Viewer includes a powerful search feature:</p>
+              <ul>
+                <li>Click the search icon in the toolbar or press Ctrl+F (Cmd+F on Mac)</li>
+                <li>Type your search query in the search box</li>
+                <li>Use the arrow buttons or press Enter to navigate between matches</li>
+                <li>Press Shift+Enter to go to the previous match</li>
+                <li>Press Escape to close the search bar</li>
+              </ul>
+              <p>Search results are highlighted in the document, and the match counter shows your current position.</p>
+            </div>
+
+            <div class="faq-item">
+              <h3>What is Reading Mode?</h3>
+              <p>Reading Mode is a distraction-free viewing experience that:</p>
+              <ul>
+                <li>Hides all UI elements except the content</li>
+                <li>Optimizes typography for comfortable reading</li>
+                <li>Provides font size controls</li>
+                <li>Shows reading time estimate</li>
+                <li>Can be activated by clicking the reading mode icon in the toolbar</li>
+                <li>Exit by pressing Escape or clicking the X button</li>
+              </ul>
+              <p>Reading Mode is perfect for reviewing long documents or documentation.</p>
+            </div>
+
+            <div class="faq-item">
+              <h3>Can I customize the appearance?</h3>
+              <p>Yes! Markdown Viewer offers several customization options:</p>
+              <ul>
+                <li><strong>Font Size:</strong> Choose from Small, Medium, or Large in the toolbar</li>
+                <li><strong>Content Width:</strong> Select Narrow, Medium, or Wide to adjust reading width</li>
+                <li><strong>Dark Mode:</strong> Toggle between light and dark themes</li>
+                <li><strong>Syntax Theme:</strong> Code blocks use a professional syntax highlighting theme</li>
+              </ul>
+              <p>All preferences are saved locally in your browser and persist across sessions.</p>
+            </div>
+
+            <div class="faq-item">
+              <h3>How do I load markdown from GitHub?</h3>
+              <p>To view markdown files from GitHub:</p>
+              <ol>
+                <li>Navigate to the markdown file on GitHub</li>
+                <li>Click the "Raw" button to view the raw markdown</li>
+                <li>Copy the URL from your browser's address bar</li>
+                <li>Paste the URL into Markdown Viewer's URL tab</li>
+                <li>Click "Load" to render the file</li>
+              </ol>
+              <p>Example URL format: <code>https://raw.githubusercontent.com/username/repo/branch/file.md</code></p>
+            </div>
+
+            <div class="faq-item">
+              <h3>Why isn't my markdown rendering correctly?</h3>
+              <p>If your markdown isn't rendering as expected, check these common issues:</p>
+              <ul>
+                <li><strong>Syntax Errors:</strong> Ensure your markdown syntax is correct (see our <a href="markdown-guide.html">Markdown Guide</a>)</li>
+                <li><strong>File Encoding:</strong> Files should be UTF-8 encoded</li>
+                <li><strong>URL Access:</strong> If loading from URL, ensure the file is publicly accessible and not blocked by CORS</li>
+                <li><strong>File Size:</strong> Files larger than 5MB cannot be uploaded</li>
+                <li><strong>Browser Compatibility:</strong> Use a modern browser (Chrome, Firefox, Safari, or Edge)</li>
+              </ul>
+              <p>If problems persist, try the text input method to isolate the issue.</p>
+            </div>
+
+            <div class="faq-item">
+              <h3>What browsers are supported?</h3>
+              <p>Markdown Viewer works on all modern browsers:</p>
+              <ul>
+                <li><strong>Chrome:</strong> Version 90+ (recommended)</li>
+                <li><strong>Firefox:</strong> Version 88+</li>
+                <li><strong>Safari:</strong> Version 14+</li>
+                <li><strong>Edge:</strong> Version 90+</li>
+                <li><strong>Mobile:</strong> iOS Safari 14+, Chrome Mobile 90+</li>
+              </ul>
+              <p>For the best experience, we recommend keeping your browser up to date.</p>
+            </div>
+
+            <div class="faq-item">
+              <h3>Is Markdown Viewer really free?</h3>
+              <p>Yes, completely free! Markdown Viewer is 100% free to use with no hidden costs, subscriptions, or premium features. We believe in providing accessible tools for everyone. There are no limits on:</p>
+              <ul>
+                <li>Number of files you can view</li>
+                <li>Number of times you can use the service</li>
+                <li>Features available (all features are free)</li>
+                <li>File size (up to 5MB per file)</li>
+              </ul>
+              <p>No registration or account is required.</p>
+            </div>
+
+            <div class="faq-item">
+              <h3>Can I use Markdown Viewer for commercial projects?</h3>
+              <p>Yes! You can use Markdown Viewer for personal, educational, and commercial purposes free of charge. Whether you're viewing documentation, README files, or any other markdown content for your business, you're welcome to use our service. See our <a href="terms.html">Terms & Conditions</a> for full details.</p>
+            </div>
+
+            <div class="faq-item">
+              <h3>How do I report a bug or request a feature?</h3>
+              <p>We welcome your feedback! To report bugs or request features:</p>
+              <ul>
+                <li>Visit our <a href="contact.html">Contact page</a></li>
+                <li>Select "Bug Report" or "Feature Request" as the subject</li>
+                <li>Provide as much detail as possible, including:
+                  <ul>
+                    <li>Your browser and operating system</li>
+                    <li>Steps to reproduce the issue (for bugs)</li>
+                    <li>Expected vs. actual behavior</li>
+                    <li>Screenshots if applicable</li>
+                  </ul>
+                </li>
+              </ul>
+              <p>We review all submissions and aim to respond within 24-48 hours.</p>
+            </div>
+
+            <div class="faq-item">
+              <h3>Does Markdown Viewer work on mobile devices?</h3>
+              <p>Yes! Markdown Viewer is fully responsive and works great on mobile devices. The interface adapts to smaller screens with:</p>
+              <ul>
+                <li>Touch-friendly buttons and controls</li>
+                <li>Collapsible table of contents</li>
+                <li>Optimized text input for mobile keyboards</li>
+                <li>Swipe gestures for navigation</li>
+                <li>Mobile-optimized reading mode</li>
+              </ul>
+              <p>You can upload files from your phone's storage or paste text from other apps.</p>
+            </div>
+
+            <div class="faq-item">
+              <h3>What happens to my markdown content?</h3>
+              <p>Your markdown content is processed entirely in your browser and never sent to our servers. Here's what happens:</p>
+              <ul>
+                <li><strong>File Upload:</strong> The file is read by your browser and processed locally</li>
+                <li><strong>Text Input:</strong> Text stays in your browser's memory</li>
+                <li><strong>URL Fetch:</strong> Your browser fetches the file directly from the source</li>
+                <li><strong>Local Storage:</strong> Only your preferences (dark mode, font size) are saved locally</li>
+              </ul>
+              <p>We have no access to your content and don't track what you view. See our <a href="privacy.html">Privacy Policy</a> for details.</p>
+            </div>
+
+            <div class="faq-item">
+              <h3>Can I convert markdown to PDF?</h3>
+              <p>Yes! While we don't have a direct "Export to PDF" button, you can easily create PDFs:</p>
+              <ol>
+                <li>Load your markdown file in Markdown Viewer</li>
+                <li>Press Ctrl+P (Windows/Linux) or Cmd+P (Mac) to open the print dialog</li>
+                <li>Select "Save as PDF" or "Microsoft Print to PDF" as the destination</li>
+                <li>Adjust settings if needed (margins, headers/footers)</li>
+                <li>Click "Save" or "Print" to create your PDF</li>
+              </ol>
+              <p>The PDF will include all formatting, images, and styling from the rendered markdown. For more details, check our blog post on <a href="/blog/convert-markdown-to-pdf.html">converting markdown to PDF</a>.</p>
+            </div>
+
+            <div class="faq-item">
+              <h3>Why can't I load a markdown file from a URL?</h3>
+              <p>If you're having trouble loading markdown from a URL, common causes include:</p>
+              <ul>
+                <li><strong>CORS Restrictions:</strong> The server hosting the file may not allow cross-origin requests. This is a security feature of web browsers.</li>
+                <li><strong>Private/Protected Files:</strong> The file may require authentication or be in a private repository.</li>
+                <li><strong>Incorrect URL:</strong> Ensure you're using the direct link to the raw markdown file, not the HTML page displaying it.</li>
+                <li><strong>Network Issues:</strong> Check your internet connection and try again.</li>
+              </ul>
+              <p>Solution: If URL loading fails, download the file and use the Upload tab instead.</p>
+            </div>
+          </section>
+
+          <section class="content-section">
+            <h2>Troubleshooting</h2>
+            
+            <h3>Common Issues and Solutions</h3>
+            
+            <div class="troubleshooting-item">
+              <h4>Issue: Page won't load or is very slow</h4>
+              <p><strong>Solutions:</strong></p>
+              <ul>
+                <li>Clear your browser cache and reload the page</li>
+                <li>Check your internet connection</li>
+                <li>Try a different browser</li>
+                <li>Disable browser extensions that might interfere</li>
+              </ul>
+            </div>
+
+            <div class="troubleshooting-item">
+              <h4>Issue: Syntax highlighting not working</h4>
+              <p><strong>Solutions:</strong></p>
+              <ul>
+                <li>Ensure you've specified the language in your code block (e.g., ```javascript)</li>
+                <li>Check that the language name is spelled correctly</li>
+                <li>Wait a moment for the syntax highlighter to load</li>
+                <li>Try refreshing the page</li>
+              </ul>
+            </div>
+
+            <div class="troubleshooting-item">
+              <h4>Issue: Images not displaying</h4>
+              <p><strong>Solutions:</strong></p>
+              <ul>
+                <li>Verify the image URL is correct and publicly accessible</li>
+                <li>Check if the image host allows hotlinking</li>
+                <li>Ensure the image URL uses HTTPS (not HTTP)</li>
+                <li>Try opening the image URL directly in your browser</li>
+              </ul>
+            </div>
+
+            <div class="troubleshooting-item">
+              <h4>Issue: Dark mode not working</h4>
+              <p><strong>Solutions:</strong></p>
+              <ul>
+                <li>Click the sun/moon icon to manually toggle dark mode</li>
+                <li>Check your browser's local storage isn't disabled</li>
+                <li>Clear your browser cache and try again</li>
+                <li>Ensure JavaScript is enabled in your browser</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="content-section">
+            <h2>Still Need Help?</h2>
+            <p>If you couldn't find the answer to your question or need additional assistance, we're here to help!</p>
+            
+            <ul>
+              <li><strong>Contact Us:</strong> Visit our <a href="contact.html">Contact page</a> to send us a message</li>
+              <li><strong>Markdown Guide:</strong> Check our comprehensive <a href="markdown-guide.html">Markdown Guide</a> for syntax help</li>
+              <li><strong>Blog:</strong> Read our <a href="blog.html">blog articles</a> for tips, tutorials, and best practices</li>
+              <li><strong>About:</strong> Learn more about Markdown Viewer on our <a href="about.html">About page</a></li>
+            </ul>
+            
+            <p>We typically respond to inquiries within 24-48 hours during business days.</p>
+          </section>
+        </div>
+      </div>
+    </article>
+  </main>
+  
+    <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <!-- Footer Top Section -->
+        <div class="footer-top">
+          <div class="footer-brand">
+            <div class="footer-logo">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+                <rect width="32" height="32" rx="6" fill="currentColor" opacity="0.1"/>
+                <path d="M8 12h16M8 16h16M8 20h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+              <span>Markdown Viewer</span>
+            </div>
+            <p class="footer-description">Free online markdown viewer and converter. View, edit, and convert markdown files instantly with syntax highlighting, dark mode, and privacy-first processing.</p>
+          </div>
+          
+          <div class="footer-links">
+            <div class="footer-column">
+              <h3>Product</h3>
+              <nav aria-label="Product navigation">
+                <a href="index.html">Markdown Viewer</a>
+                <a href="help.html">Help & FAQ</a>
+                <a href="markdown-guide.html">Markdown Guide</a>
+                <a href="blog.html">Blog</a>
+              </nav>
+            </div>
+            <div class="footer-column">
+              <h3>Company</h3>
+              <nav aria-label="Company navigation">
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+              </nav>
+            </div>
+            <div class="footer-column">
+              <h3>Legal</h3>
+              <nav aria-label="Legal navigation">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms & Conditions</a>
+                <a href="dmca.html">DMCA</a>
+              </nav>
+            </div>
+            <div class="footer-column">
+              <h3>Connect</h3>
+              <nav aria-label="Social navigation">
+                <a href="contact.html">Email Us</a>
+                <a href="sitemap-page.html">Sitemap</a>
+              </nav>
+              <div class="footer-social">
+                <a href="#" aria-label="Facebook" title="Facebook">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M20 10c0-5.523-4.477-10-10-10S0 4.477 0 10c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V10h2.54V7.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V10h2.773l-.443 2.89h-2.33v6.988C16.343 19.128 20 14.991 20 10z"/>
+                  </svg>
+                </a>
+                <a href="#" aria-label="Twitter" title="Twitter">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84"/>
+                  </svg>
+                </a>
+                <a href="#" aria-label="LinkedIn" title="LinkedIn">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M18.335 0H1.665C.747 0 0 .747 0 1.665v16.67C0 19.253.747 20 1.665 20h16.67C19.253 20 20 19.253 20 18.335V1.665C20 .747 19.253 0 18.335 0zM5.946 17.03H2.97V7.5h2.976v9.53zM4.458 6.19a1.723 1.723 0 110-3.446 1.723 1.723 0 010 3.446zM17.03 17.03h-2.974v-4.64c0-1.107-.02-2.532-1.542-2.532-1.544 0-1.78 1.205-1.78 2.45v4.722H7.76V7.5h2.853v1.303h.04c.397-.752 1.367-1.544 2.813-1.544 3.01 0 3.565 1.98 3.565 4.555v5.216z"/>
+                  </svg>
+                </a>
+                <a href="#" aria-label="GitHub" title="GitHub">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10 0C4.477 0 0 4.477 0 10c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0110 4.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C17.137 18.165 20 14.418 20 10c0-5.523-4.477-10-10-10z" clip-rule="evenodd"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Footer Divider -->
+        <div class="footer-divider"></div>
+        
+        <!-- Footer Bottom Section -->
+        <div class="footer-bottom">
+          <div class="footer-legal">
+            <p>&copy; 2025 Markdown Viewer. All rights reserved.</p>
+            <p class="footer-disclaimer">All markdown processing happens locally in your browser. No data is stored or transmitted to our servers.</p>
+          </div>
+          <div class="footer-credits">
+            <p>Made with <span class="heart">❤️</span> for the developer community</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <script src="js/utils.js" defer></script>
+  <script src="js/ui.js" defer></script>
+  <script src="js/mobile-menu.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Markdown Cheat Sheet for Beginners | Markdown Viewer Blog</title>
+  <meta name="description" content="Quick reference guide to markdown syntax. Perfect for beginners and as a handy reference for experienced users. Includes all common syntax with examples you can copy and paste.">
+  <link rel="canonical" href="https://www.markdownviewer.site/blog/markdown-cheat-sheet.html">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/themes.css">
+  <link rel="stylesheet" href="css/dark-mode-fixes.css">
+  <link rel="stylesheet" href="../css/blog.css">
+  <link rel="stylesheet" href="../css/markdown.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Markdown Cheat Sheet for Beginners",
+    "description": "Quick reference guide to markdown syntax with examples",
+    "author": {
+      "@type": "Organization",
+      "name": "Markdown Viewer"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Markdown Viewer",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.markdownviewer.site/assets/images/logo.svg"
+      }
+    },
+    "datePublished": "2025-02-05",
+    "dateModified": "2025-02-05"
+  }
+  </script>
+  <script src="../js/dark-mode.js" defer></script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <a href="../index.html" style="display: flex; align-items: center; gap: 0.5rem; text-decoration: none; color: inherit;">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+              <rect width="32" height="32" rx="6" fill="currentColor" opacity="0.1"/>
+              <path d="M8 12h16M8 16h16M8 20h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <span>Markdown Viewer</span>
+          </a>
+        </div>
+        <nav class="nav">
+          <a href="../index.html">Home</a>
+          <a href="../about.html">About</a>
+          <a href="../help.html">Help</a>
+          <a href="../markdown-guide.html">Guide</a>
+          <a href="../blog.html" class="active">Blog</a>
+          <a href="../contact.html">Contact</a>
+          <button id="dark-mode-toggle" class="btn-icon" aria-label="Toggle dark mode" title="Toggle dark mode">
+            <svg class="icon-sun" width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <circle cx="10" cy="10" r="4" stroke="currentColor" stroke-width="2"/>
+              <path d="M10 2v2M10 16v2M18 10h-2M4 10H2M15.66 4.34l-1.41 1.41M5.75 14.25l-1.41 1.41M15.66 15.66l-1.41-1.41M5.75 5.75L4.34 4.34" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <svg class="icon-moon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path d="M17 10.5A7 7 0 1 1 9.5 3a5.5 5.5 0 0 0 7.5 7.5z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <article class="content-page blog-post">
+      <div class="container">
+        <div class="content-wrapper">
+          <div class="blog-header">
+            <a href="../blog.html" class="back-link">← Back to Blog</a>
+            <h1>Markdown Cheat Sheet for Beginners</h1>
+            <div class="blog-meta">
+              <time datetime="2025-02-05">February 5, 2025</time>
+              <span class="reading-time">5 min read</span>
+            </div>
+          </div>
+          
+          <section class="content-section">
+            <p>This comprehensive markdown cheat sheet covers all the essential syntax you need to format text, create lists, add links, insert images, and more. Perfect for beginners learning markdown or as a quick reference for experienced users. All examples are ready to copy and paste!</p>
+          </section>
+
+          <section class="content-section">
+            <h2>Headings</h2>
+            <p>Create headings using hash symbols (#). The number of hashes determines the heading level.</p>
+            <pre><code># Heading 1
+## Heading 2
+### Heading 3
+#### Heading 4
+##### Heading 5
+###### Heading 6</code></pre>
+          </section>
+
+          <section class="content-section">
+            <h2>Text Formatting</h2>
+            <p>Format text with bold, italic, strikethrough, and other styles.</p>
+            <pre><code>**Bold text**
+*Italic text*
+***Bold and italic***
+~~Strikethrough~~
+`Inline code`</code></pre>
+            <p><strong>Result:</strong></p>
+            <p><strong>Bold text</strong><br>
+            <em>Italic text</em><br>
+            <strong><em>Bold and italic</em></strong><br>
+            <del>Strikethrough</del><br>
+            <code>Inline code</code></p>
+          </section>
+
+          <section class="content-section">
+            <h2>Lists</h2>
+            
+            <h3>Unordered Lists</h3>
+            <pre><code>- Item 1
+- Item 2
+  - Nested item 2.1
+  - Nested item 2.2
+- Item 3</code></pre>
+            <p><strong>Result:</strong></p>
+            <ul>
+              <li>Item 1</li>
+              <li>Item 2
+                <ul>
+                  <li>Nested item 2.1</li>
+                  <li>Nested item 2.2</li>
+                </ul>
+              </li>
+              <li>Item 3</li>
+            </ul>
+            
+            <h3>Ordered Lists</h3>
+            <pre><code>1. First item
+2. Second item
+3. Third item
+   1. Nested item 3.1
+   2. Nested item 3.2</code></pre>
+            <p><strong>Result:</strong></p>
+            <ol>
+              <li>First item</li>
+              <li>Second item</li>
+              <li>Third item
+                <ol>
+                  <li>Nested item 3.1</li>
+                  <li>Nested item 3.2</li>
+                </ol>
+              </li>
+            </ol>
+          </section>
+
+          <section class="content-section">
+            <h2>Links</h2>
+            <pre><code>[Link text](https://example.com)
+[Link with title](https://example.com "Link title")
+&lt;https://example.com&gt;</code></pre>
+            <p><strong>Result:</strong></p>
+            <p><a href="https://example.com">Link text</a><br>
+            <a href="https://example.com" title="Link title">Link with title</a><br>
+            <a href="https://example.com">https://example.com</a></p>
+          </section>
+
+          <section class="content-section">
+            <h2>Images</h2>
+            <pre><code>![Alt text](image-url.jpg)
+![Alt text](image-url.jpg "Image title")</code></pre>
+          </section>
+
+          <section class="content-section">
+            <h2>Blockquotes</h2>
+            <pre><code>> This is a blockquote
+> It can span multiple lines
+>
+> > Nested blockquote</code></pre>
+            <p><strong>Result:</strong></p>
+            <blockquote>
+              <p>This is a blockquote<br>
+              It can span multiple lines</p>
+              <blockquote>
+                <p>Nested blockquote</p>
+              </blockquote>
+            </blockquote>
+          </section>
+
+          <section class="content-section">
+            <h2>Code Blocks</h2>
+            
+            <h3>Inline Code</h3>
+            <pre><code>Use `code` in your sentence.</code></pre>
+            
+            <h3>Code Blocks</h3>
+            <pre><code>```javascript
+function hello() {
+  console.log('Hello, World!');
+}
+```</code></pre>
+            <p><strong>Result:</strong></p>
+            <pre><code class="language-javascript">function hello() {
+  console.log('Hello, World!');
+}</code></pre>
+          </section>
+
+          <section class="content-section">
+            <h2>Tables</h2>
+            <pre><code>| Header 1 | Header 2 | Header 3 |
+|----------|----------|----------|
+| Cell 1   | Cell 2   | Cell 3   |
+| Cell 4   | Cell 5   | Cell 6   |</code></pre>
+            <p><strong>Result:</strong></p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Header 1</th>
+                  <th>Header 2</th>
+                  <th>Header 3</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Cell 1</td>
+                  <td>Cell 2</td>
+                  <td>Cell 3</td>
+                </tr>
+                <tr>
+                  <td>Cell 4</td>
+                  <td>Cell 5</td>
+                  <td>Cell 6</td>
+                </tr>
+              </tbody>
+            </table>
+            
+            <h3>Table Alignment</h3>
+            <pre><code>| Left | Center | Right |
+|:-----|:------:|------:|
+| L1   | C1     | R1    |
+| L2   | C2     | R2    |</code></pre>
+          </section>
+
+          <section class="content-section">
+            <h2>Horizontal Rules</h2>
+            <pre><code>---
+***
+___</code></pre>
+            <p><strong>Result:</strong></p>
+            <hr>
+          </section>
+
+          <section class="content-section">
+            <h2>Task Lists</h2>
+            <pre><code>- [x] Completed task
+- [ ] Incomplete task
+- [ ] Another task</code></pre>
+            <p><strong>Result:</strong></p>
+            <ul style="list-style: none; padding-left: 0;">
+              <li>☑ Completed task</li>
+              <li>☐ Incomplete task</li>
+              <li>☐ Another task</li>
+            </ul>
+          </section>
+
+          <section class="content-section">
+            <h2>Escaping Characters</h2>
+            <p>Use backslash (\) to escape markdown characters:</p>
+            <pre><code>\*Not italic\*
+\# Not a heading
+\[Not a link\](url)</code></pre>
+          </section>
+
+          <section class="content-section">
+            <h2>HTML in Markdown</h2>
+            <p>You can use HTML tags directly in markdown:</p>
+            <pre><code>&lt;div align="center"&gt;
+  &lt;strong&gt;Centered bold text&lt;/strong&gt;
+&lt;/div&gt;
+
+&lt;details&gt;
+  &lt;summary&gt;Click to expand&lt;/summary&gt;
+  Hidden content here
+&lt;/details&gt;</code></pre>
+          </section>
+
+          <section class="content-section">
+            <h2>GitHub Flavored Markdown</h2>
+            
+            <h3>Mentions</h3>
+            <pre><code>@username</code></pre>
+            
+            <h3>Issue References</h3>
+            <pre><code>#123</code></pre>
+            
+            <h3>Emoji</h3>
+            <pre><code>:smile: :heart: :thumbsup:</code></pre>
+            <p><strong>Result:</strong> 😄 ❤️ 👍</p>
+          </section>
+
+          <section class="content-section">
+            <h2>Quick Reference Table</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>Element</th>
+                  <th>Syntax</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Heading</td>
+                  <td><code># H1 ## H2 ### H3</code></td>
+                </tr>
+                <tr>
+                  <td>Bold</td>
+                  <td><code>**bold**</code></td>
+                </tr>
+                <tr>
+                  <td>Italic</td>
+                  <td><code>*italic*</code></td>
+                </tr>
+                <tr>
+                  <td>Blockquote</td>
+                  <td><code>&gt; quote</code></td>
+                </tr>
+                <tr>
+                  <td>Ordered List</td>
+                  <td><code>1. Item</code></td>
+                </tr>
+                <tr>
+                  <td>Unordered List</td>
+                  <td><code>- Item</code></td>
+                </tr>
+                <tr>
+                  <td>Code</td>
+                  <td><code>`code`</code></td>
+                </tr>
+                <tr>
+                  <td>Horizontal Rule</td>
+                  <td><code>---</code></td>
+                </tr>
+                <tr>
+                  <td>Link</td>
+                  <td><code>[text](url)</code></td>
+                </tr>
+                <tr>
+                  <td>Image</td>
+                  <td><code>![alt](url)</code></td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section class="content-section">
+            <h2>Tips for Learning Markdown</h2>
+            <ol>
+              <li><strong>Practice Regularly:</strong> The best way to learn is by using it</li>
+              <li><strong>Use a Preview Tool:</strong> Try our <a href="../index.html">Markdown Viewer</a> to see results instantly</li>
+              <li><strong>Start Simple:</strong> Begin with basic formatting and gradually add more</li>
+              <li><strong>Keep This Cheat Sheet Handy:</strong> Bookmark this page for quick reference</li>
+              <li><strong>Read Other People's Markdown:</strong> Check out README files on GitHub</li>
+            </ol>
+          </section>
+
+          <section class="content-section">
+            <h2>Common Mistakes to Avoid</h2>
+            <ul>
+              <li><strong>Missing Blank Lines:</strong> Always add blank lines before and after headings, lists, and code blocks</li>
+              <li><strong>Inconsistent Spacing:</strong> Be consistent with indentation in nested lists</li>
+              <li><strong>Forgetting Alt Text:</strong> Always include alt text for images</li>
+              <li><strong>Not Escaping Special Characters:</strong> Use backslash to escape markdown characters when needed</li>
+            </ul>
+          </section>
+
+          <section class="content-section">
+            <h2>Conclusion</h2>
+            <p>This cheat sheet covers all the essential markdown syntax you need for most writing tasks. Markdown is designed to be simple and intuitive, so don't be intimidated by the number of options. Start with the basics (headings, bold, italic, lists, and links) and gradually incorporate more advanced features as you become comfortable.</p>
+            
+            <p>Remember, the best way to learn markdown is by using it. Try our <a href="../index.html">Markdown Viewer</a> to practice and see your markdown rendered in real-time. Happy writing!</p>
+          </section>
+
+          <div class="blog-footer">
+            <div class="blog-tags">
+              <span class="tag">Markdown</span>
+              <span class="tag">Cheat Sheet</span>
+              <span class="tag">Reference</span>
+              <span class="tag">Beginner</span>
+            </div>
+            
+            <div class="blog-navigation">
+              <a href="readme-best-practices.html" class="btn btn-secondary">← Previous Article</a>
+              <a href="../blog.html" class="btn btn-secondary">Back to Blog</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+  
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <!-- Footer Top Section -->
+        <div class="footer-top">
+          <div class="footer-brand">
+            <div class="footer-logo">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+                <rect width="32" height="32" rx="6" fill="currentColor" opacity="0.1"/>
+                <path d="M8 12h16M8 16h16M8 20h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+              <span>Markdown Viewer</span>
+            </div>
+            <p class="footer-description">Free online markdown viewer and converter. View, edit, and convert markdown files instantly with syntax highlighting, dark mode, and privacy-first processing.</p>
+          </div>
+          
+          <div class="footer-links">
+            <div class="footer-column">
+              <h3>Product</h3>
+              <nav aria-label="Product navigation">
+                <a href="../index.html">Markdown Viewer</a>
+                <a href="../help.html">Help & FAQ</a>
+                <a href="../markdown-guide.html">Markdown Guide</a>
+                <a href="../blog.html">Blog</a>
+              </nav>
+            </div>
+            <div class="footer-column">
+              <h3>Company</h3>
+              <nav aria-label="Company navigation">
+                <a href="../about.html">About Us</a>
+                <a href="../contact.html">Contact</a>
+              </nav>
+            </div>
+            <div class="footer-column">
+              <h3>Legal</h3>
+              <nav aria-label="Legal navigation">
+                <a href="../privacy.html">Privacy Policy</a>
+                <a href="../terms.html">Terms & Conditions</a>
+                <a href="../dmca.html">DMCA</a>
+              </nav>
+            </div>
+            <div class="footer-column">
+              <h3>Connect</h3>
+              <nav aria-label="Social navigation">
+                <a href="../contact.html">Email Us</a>
+                <a href="../sitemap-page.html">Sitemap</a>
+              </nav>
+              <div class="footer-social">
+                <a href="#" aria-label="Facebook" title="Facebook">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M20 10c0-5.523-4.477-10-10-10S0 4.477 0 10c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V10h2.54V7.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V10h2.773l-.443 2.89h-2.33v6.988C16.343 19.128 20 14.991 20 10z"/>
+                  </svg>
+                </a>
+                <a href="#" aria-label="Twitter" title="Twitter">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84"/>
+                  </svg>
+                </a>
+                <a href="#" aria-label="LinkedIn" title="LinkedIn">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M18.335 0H1.665C.747 0 0 .747 0 1.665v16.67C0 19.253.747 20 1.665 20h16.67C19.253 20 20 19.253 20 18.335V1.665C20 .747 19.253 0 18.335 0zM5.946 17.03H2.97V7.5h2.976v9.53zM4.458 6.19a1.723 1.723 0 110-3.446 1.723 1.723 0 010 3.446zM17.03 17.03h-2.974v-4.64c0-1.107-.02-2.532-1.542-2.532-1.544 0-1.78 1.205-1.78 2.45v4.722H7.76V7.5h2.853v1.303h.04c.397-.752 1.367-1.544 2.813-1.544 3.01 0 3.565 1.98 3.565 4.555v5.216z"/>
+                  </svg>
+                </a>
+                <a href="#" aria-label="GitHub" title="GitHub">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10 0C4.477 0 0 4.477 0 10c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0110 4.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C17.137 18.165 20 14.418 20 10c0-5.523-4.477-10-10-10z" clip-rule="evenodd"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Footer Divider -->
+        <div class="footer-divider"></div>
+        
+        <!-- Footer Bottom Section -->
+        <div class="footer-bottom">
+          <div class="footer-legal">
+            <p>&copy; 2025 Markdown Viewer. All rights reserved.</p>
+            <p class="footer-disclaimer">All markdown processing happens locally in your browser. No data is stored or transmitted to our servers.</p>
+          </div>
+          <div class="footer-credits">
+            <p>Made with <span class="heart">❤️</span> for the developer community</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <script src="../js/utils.js" defer></script>
+  <script src="../js/ui.js" defer></script>
+  <script src="../js/mobile-menu.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+JavaScript Minification Guide
+==============================
+
+To minify JavaScript files, use one of these methods:
+
+METHOD 1: Online Tool
+- Visit: https://javascript-minifier.com/
+- Paste JS content
+- Copy minified output
+- Save as filename.min.js
+
+METHOD 2: Command Line (if Node.js installed)
+npm install -g terser
+terser js/app.js -o js/app.min.js -c -m
+terser js/ui.js -o js/ui.min.js -c -m
+terser js/utils.js -o js/utils.min.js -c -m
+# Repeat for all JS files
+
+METHOD 3: VS Code Extension
+- Install "Minify" extension
+- Right-click JS file
+- Select "Minify"
+
+After minifying, update HTML files to use .min.js versions.
