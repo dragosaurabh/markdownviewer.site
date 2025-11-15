@@ -1,12 +1,19 @@
 {
-  "name": "Markdown Viewer Online",
-  "short_name": "MD Viewer",
-  "description": "Free online markdown viewer and converter",
+  "name": "MarkdownViewer - Free Online Markdown Viewer",
+  "short_name": "MarkdownViewer",
+  "description": "Fast, secure, privacy-first online markdown viewer and converter with GitHub-flavored syntax, code highlighting, and dark mode support",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#3B82F6",
+  "orientation": "any",
   "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
     {
       "src": "/favicon-32x32.png",
       "sizes": "32x32",
@@ -16,6 +23,16 @@
       "src": "/apple-touch-icon.png",
       "sizes": "180x180",
       "type": "image/png"
+    }
+  ],
+  "categories": ["productivity", "utilities", "developer tools"],
+  "shortcuts": [
+    {
+      "name": "View Markdown",
+      "short_name": "View",
+      "description": "Open the markdown viewer",
+      "url": "/",
+      "icons": [{ "src": "/favicon.svg", "sizes": "96x96" }]
     }
   ]
 }
