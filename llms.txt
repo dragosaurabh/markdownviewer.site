@@ -155,6 +155,7 @@ Markdown Parser: Marked.js v11.0.0
 Sanitization: DOMPurify v3.0.8
 Syntax Highlighting: Prism.js v1.29.0
 Styling: Custom CSS with CSS Variables
+Analytics: Google Analytics 4 (GA4) - Tracking ID: G-S8YZRPQ7D4
 Hosting: Static hosting (compatible with any CDN)
 
 ## Browser Support
@@ -174,7 +175,7 @@ Hosting: Static hosting (compatible with any CDN)
 - Content Security Policy (CSP) headers
 - DOMPurify XSS protection
 - No server-side processing
-- No data collection or tracking
+- Privacy-focused analytics with Google Analytics 4 (anonymized tracking)
 - HTTPS enforced
 
 ## Accessibility
@@ -374,6 +375,13 @@ Example 3: Embed in Documentation
 # ============================================================
 # CHANGELOG & UPDATES
 # ============================================================
+
+Version 2.1.5 (January 2025):
+- Added Google Analytics 4 (GA4) tracking for usage insights
+- Enhanced dark mode header and navigation styling
+- Improved mobile menu visibility in dark mode
+- Fixed theme toggle button appearance across all themes
+- Optimized logo and navigation contrast in dark mode
 
 Version 2.1.4 (January 2025):
 - Fixed copy button with dual options (text/markdown)
