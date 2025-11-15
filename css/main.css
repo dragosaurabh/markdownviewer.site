@@ -3885,3 +3885,220 @@ body.reading-mode:hover .reading-time {
 .copy-menu-item:hover svg {
   color: var(--primary-color);
 }
+
+/* ===================================
+   Content Pages Comprehensive Styling
+   Added for consistency across all pages
+   =================================== */
+
+.content-page {
+  padding: clamp(2rem, 5vw, 4rem) 0;
+  background: var(--color-bg-primary);
+  min-height: calc(100vh - var(--header-height) - 300px);
+}
+
+.content-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+}
+
+.content-page h1 {
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  margin-bottom: clamp(1rem, 3vw, 2rem);
+  color: var(--color-text-primary);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.content-page h2 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  margin-top: clamp(2rem, 4vw, 3rem);
+  margin-bottom: clamp(1rem, 2vw, 1.5rem);
+  color: var(--color-text-primary);
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.content-page h3 {
+  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+  margin-top: clamp(1.5rem, 3vw, 2rem);
+  margin-bottom: clamp(0.75rem, 1.5vw, 1rem);
+  color: var(--color-text-primary);
+  font-weight: 600;
+}
+
+.content-page h4 {
+  font-size: clamp(1.125rem, 2vw, 1.25rem);
+  margin-top: clamp(1.25rem, 2.5vw, 1.75rem);
+  margin-bottom: clamp(0.625rem, 1.2vw, 0.875rem);
+  color: var(--color-text-primary);
+  font-weight: 600;
+}
+
+.content-page p {
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  margin-bottom: clamp(0.875rem, 2vw, 1.25rem);
+  font-size: clamp(0.938rem, 1.8vw, 1.063rem);
+}
+
+.content-page a {
+  color: var(--color-primary);
+  text-decoration: underline;
+  text-decoration-color: rgba(96, 165, 250, 0.3);
+  text-underline-offset: 2px;
+  transition: all var(--transition-fast);
+}
+
+.content-page a:hover {
+  color: var(--color-primary-hover);
+  text-decoration-color: var(--color-primary);
+}
+
+.content-page ul,
+.content-page ol {
+  color: var(--color-text-secondary);
+  padding-left: 1.5rem;
+  margin-bottom: clamp(0.875rem, 2vw, 1.25rem);
+  line-height: 1.7;
+}
+
+.content-page li {
+  margin-bottom: 0.5rem;
+  color: var(--color-text-secondary);
+}
+
+.content-page strong,
+.content-page b {
+  color: var(--color-text-primary);
+  font-weight: 600;
+}
+
+.content-page blockquote {
+  border-left: 4px solid var(--color-primary);
+  padding-left: 1.5rem;
+  margin: 1.5rem 0;
+  font-style: italic;
+  color: var(--color-text-secondary);
+}
+
+.content-page code {
+  background: var(--color-bg-tertiary);
+  color: var(--color-text-primary);
+  padding: 0.2em 0.4em;
+  border-radius: var(--radius-sm);
+  font-size: 0.9em;
+  font-family: 'Monaco', 'Menlo', 'Courier New', monospace;
+}
+
+.content-page pre {
+  background: var(--color-code-bg);
+  color: var(--color-code-text);
+  padding: 1.25rem;
+  border-radius: var(--radius-md);
+  overflow-x: auto;
+  margin: 1.5rem 0;
+  border: 1px solid var(--color-border);
+}
+
+.content-page pre code {
+  background: transparent;
+  padding: 0;
+}
+
+.content-section {
+  margin-bottom: clamp(2rem, 4vw, 3rem);
+}
+
+.content-section:last-child {
+  margin-bottom: 0;
+}
+
+/* Contact Page Specific */
+.contact-info,
+.contact-method {
+  margin-bottom: 1.5rem;
+}
+
+.contact-method h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.125rem;
+}
+
+.contact-method p {
+  margin: 0.25rem 0;
+}
+
+/* Blog Post Specific Styling */
+.blog-post h1,
+.blog-post h2,
+.blog-post h3 {
+  color: var(--color-text-primary);
+}
+
+.blog-post p,
+.blog-post li {
+  color: var(--color-text-secondary);
+}
+
+.blog-header {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid var(--color-border);
+}
+
+.blog-meta {
+  display: flex;
+  gap: 1rem;
+  color: var(--color-text-tertiary);
+  font-size: 0.938rem;
+  margin-top: 1rem;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-primary);
+  text-decoration: none;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  transition: all var(--transition-fast);
+}
+
+.back-link:hover {
+  color: var(--color-primary-hover);
+  transform: translateX(-4px);
+}
+
+
+/* ===================================
+   Global Layout Fix for Sticky Footer
+   =================================== */
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+.footer {
+  flex-shrink: 0;
+}
+
+/* Ensure all pages have proper minimum height */
+.content-page,
+.viewer-section,
+.features-section {
+  flex: 1;
+}
+

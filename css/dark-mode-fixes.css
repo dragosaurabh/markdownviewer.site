@@ -361,3 +361,125 @@ body:not(.dark-mode) pre code {
   color: inherit;
   border: none;
 }
+
+/* ===================================
+   Content Pages Dark Mode Comprehensive
+   =================================== */
+
+.dark-mode .content-page {
+  background: #111827 !important;
+}
+
+.dark-mode .content-page h1,
+.dark-mode .content-page h2,
+.dark-mode .content-page h3,
+.dark-mode .content-page h4,
+.dark-mode .content-page h5,
+.dark-mode .content-page h6 {
+  color: #f9fafb !important;
+}
+
+.dark-mode .content-page p,
+.dark-mode .content-page li,
+.dark-mode .content-section p,
+.dark-mode .content-section li {
+  color: #d1d5db !important;
+}
+
+.dark-mode .content-page strong,
+.dark-mode .content-page b {
+  color: #f9fafb !important;
+}
+
+.dark-mode .content-page a {
+  color: #60a5fa !important;
+}
+
+.dark-mode .content-page a:hover {
+  color: #93c5fd !important;
+}
+
+.dark-mode .content-page blockquote {
+  border-left-color: #60a5fa !important;
+  color: #d1d5db !important;
+}
+
+.dark-mode .content-page code {
+  background: #374151 !important;
+  color: #f9fafb !important;
+}
+
+.dark-mode .content-page pre {
+  background: #1f2937 !important;
+  color: #e5e7eb !important;
+  border-color: #374151 !important;
+}
+
+.dark-mode .contact-method h3 {
+  color: #f9fafb !important;
+}
+
+.dark-mode .contact-method p {
+  color: #d1d5db !important;
+}
+
+/* Blog Post Dark Mode */
+.dark-mode .blog-post {
+  background: #111827 !important;
+}
+
+.dark-mode .blog-header {
+  border-bottom-color: #374151 !important;
+}
+
+.dark-mode .blog-meta {
+  color: #9ca3af !important;
+}
+
+.dark-mode .back-link {
+  color: #60a5fa !important;
+}
+
+.dark-mode .back-link:hover {
+  color: #93c5fd !important;
+}
+
+/* FAQ Section Dark Mode */
+.dark-mode .faq-item {
+  background: #1f2937 !important;
+  border-color: #374151 !important;
+}
+
+.dark-mode .faq-item h3 {
+  color: #60a5fa !important;
+}
+
+.dark-mode .faq-item p {
+  color: #d1d5db !important;
+}
+
+/* Reading Time Dark Mode */
+.dark-mode .reading-time {
+  color: #9ca3af !important;
+}
+
+
+/* ===================================
+   Body and Layout Dark Mode
+   =================================== */
+
+.dark-mode html,
+.dark-mode body {
+  background: #111827 !important;
+}
+
+.dark-mode main {
+  background: #111827 !important;
+}
+
+/* Ensure consistent backgrounds */
+.dark-mode .viewer-section,
+.dark-mode .features-section {
+  background: #111827 !important;
+}
+
